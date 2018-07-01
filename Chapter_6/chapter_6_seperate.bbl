@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+
+\bibitem{low_temp}
+J.~Ad{\'a}mek, M.~Peterka, T.~Gyergyek, P.~Kudrna, M.~Ramisch, U.~Stroth,
+  J.~Cavalier, and M.~Tichy.
+\newblock Application of the ball-pen probe in two low-temperature mag-netised
+  plasma devices and in torsatron tj-k.
+\newblock {\em Contributions to Plasma Physics}, 53(1):39--44, 2013.
+
+\bibitem{low_t}
+M.~Zanáška, J.~Adámek, M.~Peterka, P.~Kudrna, and M.~Tichý.
+\newblock Comparative measurements of plasma potential with ball-pen and
+  langmuir probe in low-temperature magnetized plasma.
+\newblock {\em Physics of Plasmas}, 22(3):033516, 2015.
+
+\bibitem{mirabelle}
+G.~Bousselin, J.~Cavalier, J.~F. Pautex, S.~Heuraux, N.~Lemoine, and
+  G.~Bonhomme.
+\newblock Design and validation of the ball-pen probe for measurements in a
+  low-temperature magnetized plasma.
+\newblock {\em Review of Scientific Instruments}, 84(1):013505, 2013.
+
+\bibitem{emissionya}
+Harald Ibach.
+\newblock {\em Solid-State Physics (Advanced Texts in Physics (Paperback))}.
+\newblock Springer, 2013.
+
+\bibitem{embest}
+J.~P. Sheehan, Y.~Raitses, N.~Hershkowitz, I.~Kaganovich, and N.~J. Fisch.
+\newblock A comparison of emissive probe techniques for electric potential
+  measurements in a complex plasma.
+\newblock {\em Physics of Plasmas}, 18(7):073501, 2011.
+
+\bibitem{inflection}
+J.~R. Smith, N.~Hershkowitz, and P.~Coakley.
+\newblock Inflection‐point method of interpreting emissive probe
+  characteristics.
+\newblock {\em Review of Scientific Instruments}, 50(2):210--218, 1979.
+
+\bibitem{review_em}
+J~P Sheehan and N~Hershkowitz.
+\newblock Emissive probes.
+\newblock {\em Plasma Sources Science and Technology}, 20(6):063001, 2011.
+
+\bibitem{bradley}
+J~W Bradley, S~Thompson, and Y~Aranda Gonzalvo.
+\newblock Measurement of the plasma potential in a magnetron discharge and the
+  prediction of the electron drift speeds.
+\newblock {\em Plasma Sources Science and Technology}, 10(3):490, 2001.
+
+\end{thebibliography}

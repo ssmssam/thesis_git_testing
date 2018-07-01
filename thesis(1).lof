@@ -1,0 +1,13 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A representation of a two dimensional grid. The particle (grey circle) moves through the domain and deposits charge on the grid points. The area of the rectangle is proportional to the amount of charge deposited at each grid point.\cite {grid}\relax }}{8}{figure.caption.17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A flow chart of the essential steps of the PIC algorithm \relax }}{9}{figure.caption.18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A graphical representation of the Leap-Frog scheme\cite {shape}\relax }}{13}{figure.caption.47}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The effective shape of a particle at position x as seen by the grid.\cite {shape}\relax }}{15}{figure.caption.58}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces A source region on the left-hand side replaces particles that are lost to the wall.\relax }}{17}{figure.caption.61}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The velocity distribution of particles in different regions of the plasma at the end of the simulation. The Maxwellian distribution is conserved.\relax }}{18}{figure.caption.62}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces The velocity distribution of particles in different regions of the plasma at the end of the simulation. The Maxwellian distribution is conserved.\relax }}{19}{figure.caption.63}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

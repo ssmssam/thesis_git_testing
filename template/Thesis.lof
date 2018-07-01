@@ -1,0 +1,6 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A representation of a two dimensional grid. The particle (grey circle) moves through the domain and deposits charge on the grid points. The area of the rectangle is proportional to the amount of charge deposited at each grid point.\cite {grid}\relax }}{6}{figure.caption.17}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A flow chart of the PIC algorithm \cite {loop}\relax }}{7}{figure.caption.18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The effective shape of a particle at position x as seen by the grid.\cite {shape}\relax }}{8}{figure.caption.20}

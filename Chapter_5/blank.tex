@@ -1,0 +1,63 @@
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+
+\newcommand{\nucl}[3]{ \ensuremath{ \phantom{\ensuremath{^{1}_{#2}}} \llap{\ensuremath{^{#1}}} \llap{\ensuremath{_{\rule{0pt}{.75em}#2}}} \mbox{#3} } }
+
+
+
+
+
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{notoccite}
+\usepackage{epigraph} % epigraph
+\usepackage{float}
+\usepackage[hyphens]{url}
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim,listings}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{array}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+
+% \documentclass[a4paper,12pt]{article}
+%\usepackage[a4paper,vmargin={20mm,20mm},hmargin={20mm,20mm}]{geometry}
+\usepackage{amsmath,amsfonts,amsthm,color,psfrag,epsf,graphicx}
+% \usepackage{pstricks}
+\usepackage{enumerate,caption}
+%\usepackage[lined,algonl,boxed]{algorithm2e}
+\usepackage[ruled,linesnumbered,vlined]{algorithm2e}
+\usepackage{float}
+% \SpecialCoor
+\def\subsum{\mathit{\Sigma}}
+
+
+
+
+\def\ifthesis{\iftrue}
+\setcounter{secnumdepth}{2}
+\newenvironment{myindentpar}[1]%
+{\begin{list}{}%
+		{\setlength{\leftmargin}{#1}}%
+		\item[]%
+	}
+	{\end{list}}
+
+
+
+
+\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+\usepackage{epigraph} % epigraph
+%customize: \setlength{\epigraphwidth}{7cm}\setlength{\epigraphrule}{0pt}
+%use: \epigraph{text}{reference}
+
+%customize: \setlength{\epigraphwidth}{7cm}\setlength{\epigraphrule}{0pt}
+%use: \epigraph{text}{reference}
+\begin{document}
+\bibliographystyle{unsrt}
+\section*{Declaration}
+Figures .... and the accompanying discussion have previously been published in . 
+\section{Introduction}
+moo aaaa
+\section{References}
+\bibliography{references}
+	
+\end{document} 

@@ -1,0 +1,136 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter_4_seperate.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+I was expecting an "="---line 70 of file references.bib
+ :   
+ :   series={Series in Plasma Physics and Fluid Dynamics},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 448 of file references.bib
+ : @article{emissive
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 636 of file references.bib
+ :  @article {low_temp
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 819 of file references.bib
+ :      @article{pin-plate-pitts
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 831 of file references.bib
+ :    @article{JET_TE
+ :                   ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 851 of file references.bib
+ :  eid = 
+ :        ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 878 of file references.bib
+ :  eid = 
+ :        ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 948 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 954 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 981 of file references.bib
+ :  
+ :  %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 992 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1022 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1035 of file references.bib
+ : @article{matthews
+ :                  ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1078 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1111 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1159 of file references.bib
+ : @book{bible
+ :            ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "BPP_flat"
+Warning--empty year in BPP
+Warning--empty year in NW
+Warning--empty booktitle in filament_res
+Warning--empty year in filament_res
+Name 4 in "J. Ad{\'a}mek, J. and Horacek, J. and V. Rohde and H. M\"uller, and C. Ionita and R. Schrittwieser. and F. Mehlmann and J. St\"ockel, and V. Weinzettl and J. Seidl and M. Peterka and ASDEX Upgrade Team" has a comma at the end for entry BPP_resolution
+while executing---line 944 of file unsrt.bst
+Name 8 in "J. Ad{\'a}mek, J. and Horacek, J. and V. Rohde and H. M\"uller, and C. Ionita and R. Schrittwieser. and F. Mehlmann and J. St\"ockel, and V. Weinzettl and J. Seidl and M. Peterka and ASDEX Upgrade Team" has a comma at the end for entry BPP_resolution
+while executing---line 944 of file unsrt.bst
+Name 2 in "J. Ad{\'a}mek and M. Peterka, and Gyergyek, T. and Kudrna, P. and Ramisch, M. and Stroth, U. and Cavalier, J. and Tichy, M." has a comma at the end for entry low_temp
+while executing---line 944 of file unsrt.bst
+Name 4 in "J. Ad{\'a}mek and C. Ionita and R. Schrittwieser and J. St{\"o}ckel, and M. Tichy and G. Van Oost" has a comma at the end for entry BPP_TE
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in BPP-EP
+Warning--empty year in BPP-EP
+Name 1 in "C. Birdsall, and A. Langdon" has a comma at the end for entry bible
+while executing---line 944 of file unsrt.bst
+Name 7 in "R. Schrittwieser and C. Ionita and J. Ad{\'a}mek and J. St{\"o}ckel and J. Brot{\'a}nkov{\'a} and E. Martines and G. Popa, and C.Costin and L. van de Peppel, and G. Van Oost" has a comma at the end for entry bpp_diameter
+while executing---line 944 of file unsrt.bst
+Name 9 in "R. Schrittwieser and C. Ionita and J. Ad{\'a}mek and J. St{\"o}ckel and J. Brot{\'a}nkov{\'a} and E. Martines and G. Popa, and C.Costin and L. van de Peppel, and G. Van Oost" has a comma at the end for entry bpp_diameter
+while executing---line 944 of file unsrt.bst
+You've used 36 entries,
+            1791 wiz_defined-function locations,
+            681 strings with 11627 characters,
+and the built_in function-call counts, 9575 in all, are:
+= -- 661
+> -- 771
+< -- 1
++ -- 270
+- -- 234
+* -- 884
+:= -- 1698
+add.period$ -- 110
+call.type$ -- 36
+change.case$ -- 33
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 328
+empty$ -- 778
+format.name$ -- 234
+if$ -- 1964
+int.to.chr$ -- 0
+int.to.str$ -- 36
+missing$ -- 39
+newline$ -- 183
+num.names$ -- 38
+pop$ -- 67
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 509
+swap$ -- 37
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 6
+while$ -- 71
+width$ -- 38
+write$ -- 393
+(There were 23 error messages)

@@ -1,0 +1,81 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter_1_seperate.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+You're missing a field name---line 239 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 245 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 271 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 321 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 377 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 410 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 537 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in outlook2016
+Warning--empty journal in BP
+Warning--empty journal in uranium
+Warning--empty year in nick
+You've used 13 entries,
+            1791 wiz_defined-function locations,
+            534 strings with 6871 characters,
+and the built_in function-call counts, 3549 in all, are:
+= -- 218
+> -- 333
+< -- 0
++ -- 117
+- -- 104
+* -- 330
+:= -- 660
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 17
+duplicate$ -- 114
+empty$ -- 258
+format.name$ -- 104
+if$ -- 705
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 14
+newline$ -- 69
+num.names$ -- 13
+pop$ -- 31
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 40
+stack$ -- 0
+substring$ -- 152
+swap$ -- 10
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 23
+width$ -- 15
+write$ -- 139
+(There were 7 error messages)

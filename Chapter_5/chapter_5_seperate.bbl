@@ -1,0 +1,115 @@
+\begin{thebibliography}{10}
+
+\bibitem{Stangeby}
+P.~C. Stangeby.
+\newblock Plasma diagnostics.
+\newblock 2(9):157, 1988.
+
+\bibitem{child}
+C.~D. Child.
+\newblock Discharge from hot cao.
+\newblock {\em Phys. Rev. (Series I)}, 32:492--511, May 1911.
+
+\bibitem{childL}
+Irving Langmuir.
+\newblock The effect of space charge and residual gases on thermionic currents
+  in high vacuum.
+\newblock {\em Phys. Rev.}, 2:450--486, Dec 1913.
+
+\bibitem{tilting}
+G~F Matthews, S~J Fielding, G~M McCracken, C~S Pitcher, P~C Stangeby, and
+  M~Ulrickson.
+\newblock Investigation of the fluxes to a surface at grazing angles of
+  incidence in the tokamak boundary.
+\newblock {\em Plasma Physics and Controlled Fusion}, 32(14):1301, 2004.
+
+\bibitem{gunn_magnetisation}
+J.~P. Gunn.
+\newblock The influence of magnetization strength on the sheath: Implications
+  for flush-mounted probes.
+\newblock {\em Physics of Plasmas}, 4(12):4435--4446, 1997.
+
+\bibitem{current-con}
+J.R. Myra, D.A. D'Ippolito, and M.J. Gerver.
+\newblock Faraday screen sheaths and impurity production during ion cyclotron
+  heating.
+\newblock {\em Nuclear Fusion}, 30(5):845, 1990.
+
+\bibitem{asdex_FMP}
+M.~Weinlich and A.~Carlson.
+\newblock Flush mounted probes in asdex upgrade - can they be operated as
+  triple probes?
+\newblock {\em Contributions to Plasma Physics}, 36(S1):53--59, 1996.
+
+\bibitem{bergmann_1994}
+A.~{Bergmann}.
+\newblock {Two-dimensional particle simulation of Langmuir probe sheaths with
+  oblique magnetic field}.
+\newblock {\em Physics of Plasmas}, 1:3598--3606, November 1994.
+
+\bibitem{Bergmann-2002}
+M.~Weinlich and A.~Carlson.
+\newblock Flush mounted langmuir probes in an oblique magnetic field.
+\newblock {\em Physics of Plasmas}, 4(6):2151--2160, 1997.
+
+\bibitem{Emmert}
+G.~Emmert, R.~Wieland, A.~Mense, and J.~Davidson.
+\newblock {Electric sheath and presheath in a collisionless, finite ion
+  temperature plasma}.
+\newblock {\em The Physics of Fluids}, 23(4), 1980.
+
+\bibitem{Chodura}
+R.~Chodura.
+\newblock Plasma–wall transition in an oblique magnetic field.
+\newblock {\em Physics of Fluids}, 25(9):1628--1633, 1982.
+
+\bibitem{below_floating}
+J~A Tagle, P~C Stangeby, and S~K Erents.
+\newblock Errors in measuring electron temperatures using a single langmuir
+  probe in a magnetic field.
+\newblock {\em Plasma Physics Contr Fusion}, 29(3):297, 1987.
+
+\bibitem{electrical_probes}
+G~F Matthews.
+\newblock Tokamak plasma diagnosis by electrical probes.
+\newblock {\em Plasma Physics Contr Fusion}, 36(10):1595, 1994.
+
+\bibitem{iv_safe_region}
+P.~Stangeby.
+\newblock Determination of {$T_e$} from a langmuir probe in a magnetic field by
+  directly measuring the probe's sheath drop using a pin-plate probe.
+\newblock {\em Plasma Physics Contr Fusion}, 37(11):1337, 1995.
+
+\bibitem{pin-plate-pitts}
+R~A Pitts and P~C Stangeby.
+\newblock Experimental tests of langmuir probe theory for strong magnetic
+  fields.
+\newblock {\em Plasma Physics and Controlled Fusion}, 32(13):1237, 1990.
+
+\bibitem{MAST_DIV}
+E~Havlíčková, J~Harrison, B~Lipschultz, G~Fishpool, A~Kirk, A~Thornton,
+  M~Wischmeier, S~Elmore, and S~Allan.
+\newblock Solps analysis of the mast-u divertor with the effect of heating
+  power and pumping on the access to detachment in the super-x configuration.
+\newblock {\em Plasma Physics and Controlled Fusion}, 57(11):115001, 2015.
+
+\bibitem{ITER}
+GJ~Van~Rooij, VP~Veremiyenko, WJ~Goedheer, B~De~Groot, AW~Kleyn, PHM Smeets,
+  TW~Versloot, DG~Whyte, R~Engeln, DC~Schram, et~al.
+\newblock Extreme hydrogen plasma densities achieved in a linear plasma
+  generator.
+\newblock {\em Applied physics letters}, 90(12):121501, 2007.
+
+\bibitem{CMOD_DIV}
+B.~LaBombard, J.~Goetz, C.~Kurz, D.~Jablonski, B.~Lipschultz, G.~McCracken,
+  A.~Niemczewski, R.~L. Boivin, F.~Bombarda, C.~Christensen, S.~Fairfax,
+  C.~Fiore, D.~Garnier, M.~Graf, S.~Golovato, R.~Granetz, M.~Greenwald,
+  S.~Horne, A.~Hubbard, I.~Hutchinson, J.~Irby, J.~Kesner, T.~Luke, E.~Marmar,
+  M.~May, P.~O’Shea, M.~Porkolab, J.~Reardon, J.~Rice, J.~Schachter,
+  J.~Snipes, P.~Stek, Y.~Takase, J.~Terry, G.~Tinios, R.~Watterson, B.~Welch,
+  and S.~Wolfe.
+\newblock Scaling and transport analysis of divertor conditions on the alcator
+  c‐mod tokamak.
+\newblock {\em Physics of Plasmas}, 2(6):2242--2248, 1995.
+
+\end{thebibliography}

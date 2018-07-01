@@ -1,0 +1,91 @@
+\begin{thebibliography}{10}
+
+\bibitem{outlook2016}
+Iternational~Energy Authority.
+\newblock World energy outlook 2016.
+\newblock 2016. URL https://www.iae.org.
+
+\bibitem{BP}
+BP.
+\newblock Bp statistical review of world energy 2016.
+\newblock 2016. URL
+  https://www.bp.com/content/dam/bp/pdf/energy-economics/statistical-review-2016/bp-statistical-review-of-world-energy-2016-full-report.pdf.
+
+\bibitem{uranium}
+OECD NEA.
+\newblock Uranium: Resources, production and demand.
+\newblock 2014. URL
+  https://www.oecd-nea.org/ndd/pubs/2014/7209-uranium-2014.pdf.
+
+\bibitem{fission}
+Barry~W. Brook, Agustin Alonso, Daniel~A. Meneley, Jozef Misak, Tom Blees, and
+  Jan~B. van Erp.
+\newblock Why nuclear energy is sustainable and has to be part of the energy
+  mix.
+\newblock {\em Sustainable Materials and Technologies}, 1–2:8 -- 16, 2014.
+
+\bibitem{fusion_fuel}
+J~ONGENA and Guido Van~Oost.
+\newblock Energy for future centuries - will fusion be an inexhaustible, safe
+  and clean energy source?
+\newblock {\em FUSION SCIENCE AND TECHNOLOGY}, 45(2T):3--14, 2004.
+
+\bibitem{Q_record}
+M.~Keilhacker, A.~Gibson, C.~Gormezano, P.J. Lomas, P.R. Thomas, M.L. Watkins,
+  P.~Andrew, B.~Balet, D.~Borba, C.D. Challis, I.~Coffey, G.A. Cottrell,
+  H.P.L.~De Esch, N.~Deliyanakis, A.~Fasoli, C.W. Gowers, H.Y. Guo, G.T.A.
+  Huysmans, T.T.C. Jones, W.~Kerner, R.W.T. König, M.J. Loughlin, A.~Maas,
+  F.B. Marcus, M.F.F. Nave, F.G. Rimini, G.J. Sadler, S.E. Sharapov, G.~Sips,
+  P.~Smeulders, F.X. Söldner, A.~Taroni, B.J.D. Tubbing, M.G. von Hellermann,
+  D.J. Ward, and JET Team.
+\newblock High fusion performance from deuterium-tritium plasmas in jet.
+\newblock {\em Nuclear Fusion}, 39(2):209, 1999.
+
+\bibitem{nick}
+N.~Walkden 2014.
+\newblock Properties of intermittent transport in the mega ampere spherical
+  tokamak.
+\newblock {\em PhD Thesis}, University of York(2014).
+
+\bibitem{H-mode}
+F.~Wagner, G.~Becker, K.~Behringer, D.~Campbell, A.~Eberhagen, W.~Engelhardt,
+  G.~Fussmann, O.~Gehre, J.~Gernhardt, G.~v. Gierke, G.~Haas, M.~Huang,
+  F.~Karger, M.~Keilhacker, O.~Kl\"uber, M.~Kornherr, K.~Lackner, G.~Lisitano,
+  G.~G. Lister, H.~M. Mayer, D.~Meisel, E.~R. M\"uller, H.~Murmann,
+  H.~Niedermeyer, W.~Poschenrieder, H.~Rapp, H.~R\"ohr, F.~Schneider,
+  G.~Siller, E.~Speth, A.~St\"abler, K.~H. Steuer, G.~Venus, O.~Vollmer, and
+  Z.~Y\"u.
+\newblock Regime of improved confinement and high beta in neutral-beam-heated
+  divertor discharges of the asdex tokamak.
+\newblock {\em Phys. Rev. Lett.}, 49:1408--1412, Nov 1982.
+
+\bibitem{edge_importance}
+P.C. Stangeby and G.M. McCracken.
+\newblock Plasma boundary phenomena in tokamaks.
+\newblock {\em Nuclear Fusion}, 30(7):1225, 1990.
+
+\bibitem{DEMO_material}
+J.~Knaster, A.~Moeslang, and T.~Muroga.
+\newblock Materials research for fusion.
+\newblock {\em Nat Phys}, 12(5):424--434, May 2016.
+\newblock Review.
+
+\bibitem{GEOFF}
+G.~{Fishpool}, J.~{Canik}, G.~{Cunningham}, J.~{Harrison}, I.~{Katramados},
+  A.~{Kirk}, M.~{Kovari}, H.~{Meyer}, R.~{Scannell}, and {MAST-upgrade Team}.
+\newblock {MAST-upgrade divertor facility and assessing performance of
+  long-legged divertors}.
+\newblock {\em Journal of Nuclear Materials}, 438:S356--S359, July 2013.
+
+\bibitem{SOLPS}
+E~Havlíčková, W~Fundamenski, M~Wischmeier, G~Fishpool, and A~W Morris.
+\newblock Investigation of conventional and super-x divertor configurations of
+  mast upgrade using scrape-off layer plasma simulation.
+\newblock {\em Plasma Physics and Controlled Fusion}, 56(7):075008, 2014.
+
+\bibitem{chen2015introduction}
+F.F. Chen.
+\newblock {\em Introduction to Plasma Physics and Controlled Fusion}.
+\newblock Springer International Publishing, 2015.
+
+\end{thebibliography}

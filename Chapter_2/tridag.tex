@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+	\addtolength{\oddsidemargin}{-.4in}
+	\addtolength{\evensidemargin}{-.4in}
+	\addtolength{\textwidth}{0.8in}
+	\addtolength{\topmargin}{-0.8in}
+	\addtolength{\textheight}{1.4in}
+\usepackage{float}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+%\usepackage{textgreek}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{bbm}
+\usepackage{bbold}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\def\jddot#1{\stackrel{\bigdot\bigdot}{#1}}
+\def\L{\mathcal L}
+\def\e{\varepsilon}
+\def\simlt{\stackrel{<}{{}_\sim}}
+\def\simgt{\stackrel{>}{{}_\sim}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\newcommand{\nucl}[3]{
+\ensuremath{
+\phantom{\ensuremath{^{#1}_{#2}}}
+\llap{\ensuremath{^{#1}}}
+\llap{\ensuremath{_{\rule{0pt}{.75em}#2}}}
+\mbox{#3}
+}
+}
+
+
+
+
+
+%\bibpunct{(}{)}{;}{a}{ }{,}
+\begin{document} 
+Let N be the number of grid points. 
+\be
+\psi_{N-1} -2\psi_N + \psi_{N+1}  = - \frac{\rho_N (\Delta x)^2}{\epsilon_0}
+\ee 
+
+
+The charge density at the last grid point ($\rho_N$) has a known value, made from a contribution of the plasma near the last grid point and particles that have deposited their charge on exiting the system. The grid point N+1 is not part of the system but it's potential
+($\psi_{N+1}$)   is assumed to have the same value as the potential at the wall ($\psi_{N}$) for a perfect conductor. 
+\be 
+\psi_{N+1} = \psi_{N}
+\ee 
+Therefore 
+\be
+\psi_{N-1} -\psi_N   = - \frac{\rho_N (\Delta x)^2}{\epsilon_0}
+\ee 
+
+In solving the matrix equation 
+\be
+\begin{pmatrix}
+  B_{1} & C_{1}  \\
+  A_{2} & B_{2} & C_2 \\
+        & A_3  & B_3 & C_3   \\
+        & & \ddots & \ddots & \ddots \\
+        & & &  A_N & B_N
+\end{pmatrix}
+\begin{pmatrix} 
+ \psi_1  \\ 
+ \psi_2  \\ 
+ \psi_3  \\ 
+ \vdots  \\
+ \psi_N
+\end{pmatrix}
+= 
+\begin{pmatrix} 
+ \rho_1  \\ 
+ \rho_2  \\ 
+ \rho_3  \\ 
+ \vdots  \\
+ \rho_N
+\end{pmatrix}
+\ee         
+
+$B_1=1 ,C1=0 , \rho_1=0$ to fix the potential on the left hand side to be 0V. And on the right hand side
+$A_N =1, B_N = -1$ and $\rho_N$ is the charge deposited by particles in the last grid cell as well as the charge that has been deposited on the wall. 
+
+
+\end{document}

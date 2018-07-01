@@ -1,0 +1,235 @@
+\begin{thebibliography}{10}
+
+\bibitem{me}
+S~Murphy-Sugrue, J~Harrison, N~R Walkden, P~Bryant, and J~W Bradley.
+\newblock Improved understanding of the ball-pen probe through particle-in-cell
+  simulations.
+\newblock {\em Plasma Physics and Controlled Fusion}, 59(5):055007, 2017.
+
+\bibitem{bound2}
+P.C. Stangeby and G.M. McCracken.
+\newblock Plasma boundary phenomena in tokamaks.
+\newblock {\em Nuclear Fusion}, 30(7):1225, 1990.
+
+\bibitem{JET_TE}
+J.~Tagle, P.~Stangeby, and S.~Erents.
+\newblock Errors in measuring electron temperatures using a single langmuir
+  probe in a magnetic field.
+\newblock {\em Plasma Physics and Controlled Fusion}, 29(3):297, 1987.
+
+\bibitem{matthews}
+G.~Matthews.
+\newblock Tokamak plasma diagnosis by electrical probes.
+\newblock {\em Plasma Physics and Controlled Fusion}, 36(10):1595, 1994.
+
+\bibitem{iv_safe_region}
+P.~Stangeby.
+\newblock Determination of {$T_e$} from a langmuir probe in a magnetic field by
+  directly measuring the probe's sheath drop using a pin-plate probe.
+\newblock {\em Plasma Physics Contr Fusion}, 37(11):1337, 1995.
+
+\bibitem{pin-plate-pitts}
+R~A Pitts and P~C Stangeby.
+\newblock Experimental tests of langmuir probe theory for strong magnetic
+  fields.
+\newblock {\em Plasma Physics and Controlled Fusion}, 32(13):1237, 1990.
+
+\bibitem{Adamek2009}
+J.~Ad{\'a}mek, V.~Rohde, H.W. M{\"u}ller, A.~Herrmann, C.~Ionita,
+  R.~Schrittwieser, F.~Mehlmann, J.~St{\"o}ckel, J.~Horacek, J.~Brotankova, and
+  ASDEX~Upgrade Team.
+\newblock Direct measurements of the plasma potential in {ELMy} h-mode plasma
+  with ball-pen probes on {ASDEX} upgrade tokamak.
+\newblock {\em J. Nucl. Mater.}, 390 – 391:1114 -- 1117, (2009).
+
+\bibitem{filaments}
+D.~A. D{'}Ippolito, J.~R. Myra, and S.~J. Zweben.
+\newblock Convective transport by intermittent blob-filaments: Comparison of
+  theory and experiment.
+\newblock {\em Physics of Plasmas}, 18(6), 2011.
+
+\bibitem{blobs}
+F.~Militello, P.~Tamain, W.~Fundamenski, A.~Kirk, V.~Naulin, A.~Nielsen, and
+  the MAST~team.
+\newblock Experimental and numerical characterization of the turbulence in the
+  scrape-off layer of mast.
+\newblock {\em Plasma Physics and Controlled Fusion}, 55(2):025005, 2013.
+
+\bibitem{emissive}
+R.~Schrittwieser, J.~Ad{\'a}mek, P.~Balan, M.~Hron, C.~Ionita, K.~Jakubka,
+  L.~Kryska, E.~Martines, J.~St{\"o}ckel, M.~Tichy, and G.~Van Oost.
+\newblock Measurements with an emissive probe in the castor tokamak.
+\newblock {\em Plasma Physics Contr Fusion}, 44(5):567, 2002.
+
+\bibitem{BPP}
+J.~Ad{\'a}mek, J.~St{\"o}ckel, M.~Hron, J.~Ryszawy, M.~Tich{\'y},
+  R.~Schrittwieser, C.~Ionit{\u{a}}, P.~Balan, E.~Martines, and G.~Van Oost.
+\newblock A novel approach to direct measurement of the plasma potential.
+\newblock {\em Czechoslovak Journal of Physics}, 54(3):C95--C99.
+
+\bibitem{NW}
+N.~Walkden 2014.
+\newblock Properties of intermittent transport in the mega ampere spherical
+  tokamak.
+\newblock {\em PhD Thesis}, University of York(2014).
+
+\bibitem{filament_res}
+K.~Kova{\v{r}}{\'\i}k, I.~{\v{D}}uran, J.~St{\"o}ckel, J.~Seidl,
+  D.~{\v{S}}est{\'a}k, J.~Brot{\'a}nkov{\'a}, M.~Spolaore, E.~Martines,
+  N.~Vianello, C.~Hidalgo, et~al.
+\newblock U-probe for the compass tokamak.
+
+\bibitem{BPP_resolution}
+J.~J.~Ad{\'a}mek, J.~Horacek, V.~Rohde, H.~M\"uller, C.~Ionita,
+  R.~Schrittwieser., F.~Mehlmann, J.~St\"ockel, V.~Weinzettl, J.~Seidl,
+  M.~Peterka, and ASDEX~Upgrade Team.
+\newblock {ELM studies with ball-pen and Langmuir probes on ASDEX Upgrade}.
+\newblock In M.~Mateev and E.~Benova, editors, {\em {36th European Physical
+  Society Conference on Plasma Physics. Contributed Papers}}, volume 33E of
+  {\em {ECA}}, Sofia, 2009. European Physical Society.
+
+\bibitem{BPP-COMPASS}
+R.~P{\'a}nek, J.~Ad{\'a}mek, M.~Aftanas, P.~B{\'i}lkov{\'a}, P.~B{\"o}hm,
+  F.~Brochard, P.~Cahyna, J.~Cavalier, R.~Dejarnac, M.~Dimitrova, O.~Grover,
+  and J.~Harrison et~al.
+\newblock Status of the compass tokamak and characterization of the first
+  h-mode.
+\newblock {\em Plasma Phys Contr Fusion}, 58(1):014015, 2016.
+
+\bibitem{BPP-MAST}
+N.~R. {Walkden}, J.~{Ad{\'a}mek}, S.~{Allan}, B.~D. {Dudson}, S.~{Elmore},
+  G.~{Fishpool}, J.~{Harrison}, A.~{Kirk}, and M.~{Komm}.
+\newblock {Profile measurements in the plasma edge of mega amp spherical
+  tokamak using a ball pen probe}.
+\newblock {\em Review of Scientific Instruments}, 86(2):023510, 2015.
+
+\bibitem{low_temp}
+J.~Ad{\'a}mek, M.~Peterka, T.~Gyergyek, P.~Kudrna, M.~Ramisch, U.~Stroth,
+  J.~Cavalier, and M.~Tichy.
+\newblock Application of the ball-pen probe in two low-temperature mag-netised
+  plasma devices and in torsatron tj-k.
+\newblock {\em Contributions to Plasma Physics}, 53(1):39--44, 2013.
+
+\bibitem{BPP_TE}
+J.~Ad{\'a}mek, C.~Ionita, R.~Schrittwieser, J.~St{\"o}ckel, M.~Tichy, and
+  G.~Van Oost.
+\newblock Direct measurements of the electron temperature by a
+  ball-pen/langmuir probe.
+\newblock {\em 32nd EPS Conference on Plasma Physics Contr Fusion}, 29, 2005.
+
+\bibitem{ISTTOK_te}
+J.~Adamek, H.~W. Müller, C.~Silva, R.~Schrittwieser, C.~Ionita, F.~Mehlmann,
+  S.~Costea, J.~Horacek, B.~Kurzan, P.~Bilkova, P.~Böhm, M.~Aftanas,
+  P.~Vondracek, J.~Stöckel, R.~Panek, H.~Fernandes, and H.~Figueiredo.
+\newblock Profile measurements of the electron temperature on the asdex
+  upgrade, compass, and isttok tokamak using thomson scattering, triple, and
+  ball-pen probes.
+\newblock {\em Review of Scientific Instruments}, 87(4):043510, 2016.
+
+\bibitem{stangeby-2000}
+P~C Stangeby.
+\newblock {\em {The Plasma Boundary of Magnetic Fusion Devices}}.
+\newblock IoP, 2000.
+
+\bibitem{LandH}
+J.~Adamek, J.~Horacek, H.W. Müller, V.~Rohde, C.~Ionita, R.~Schrittwieser,
+  F.~Mehlmann, B.~Kurzan, J.~Stöckel, R.~Dejarnac, V.~Weinzettl, J.~Seidl,
+  M.~Peterka, and ASDEX~Upgrade Team.
+\newblock Ball-pen probe measurements in l-mode and h-mode on asdex upgrade.
+\newblock {\em Contributions to Plasma Physics}, 50(9):854--859, 2010.
+
+\bibitem{L-mode}
+J.~Horacek, J.~Adamek, H.W. Müller, J.~Seidl, A.H. Nielsen, V.~Rohde,
+  F.~Mehlmann, C.~Ionita, E.~Havlíčková, and the ASDEX Upgrade~Team.
+\newblock Interpretation of fast measurements of plasma potential, temperature
+  and density in sol of asdex upgrade.
+\newblock {\em Nuclear Fusion}, 50(10):105001, 2010.
+
+\bibitem{BPP-SEP}
+J.~Ad{\'a}mek, J.~Horacek, J.~Seidl, H.~W. M{\"u}ller, R.~Schrittwieser,
+  F.~Mehlmann, P.~Vondracek, S.~Ptak, COMPASS Team, and ASDEX~Upgrade Team.
+\newblock {Direct Plasma Potential Measurements by Ball-Pen Probe and
+  Self-Emitting Langmuir Probe on {COMPASS} and {ASDEX} Upgrade}.
+\newblock {\em Contrib Plasm Phys}, 54(3):279--284, 2014.
+
+\bibitem{BPP-EP}
+J.~Ad{\'a}mek, J.~St{\"o}ckel, I.~{\v{D}}uran, M.~Hron, R.~P{\'a}nek,
+  M.~Tich{\'y}, R.~Schrittwieser, C.~Ionit, P.~Balan, E.~Martines, and G.~Oost.
+\newblock Comparative measurements of the plasma potential with the ball-pen
+  and emissive probes on the castor tokamak.
+\newblock 55(3):235--242.
+
+\bibitem{low_temp2}
+Guillaume Bousselin, Jordan Cavalier, Jean-Fran{\c{c}}ois Pautex, St{\'e}phane
+  Heuraux, Nicolas Lemoine, and G{\'e}rard Bonhomme.
+\newblock Design and validation of the ball-pen probe for measurements in a
+  low-temperature magnetized plasma.
+\newblock {\em Review of Scientific Instruments}, 84(1):013505, 2013.
+
+\bibitem{BPP-PIC}
+M.~Komm, J.~Adamek, Z.~Pekarek, and R.~Panek.
+\newblock Particle-in-cell simulations of the ball-pen probe.
+\newblock {\em Contributions to Plasma Physics}, 50(9):814--818, 2010.
+
+\bibitem{komm-ION}
+M~Komm, J~Ad{\'a}mek, R~Dejarnac, J~P Gunn, and Z~Pekarek.
+\newblock Transport of electrons in the tunnel of an ion sensitive probe.
+\newblock {\em Plasma Phys Contr Fusion}, 53(1):015005, 2011.
+
+\bibitem{sullivan2013internal}
+RM~Sullivan, R~Ochoukov, and DG~Whyte.
+\newblock Internal physics of the ion-sensitive probe.
+\newblock {\em Journal of Nuclear Materials}, 438:S1253--S1256, 2013.
+
+\bibitem{Emmert}
+G.~Emmert, R.~Wieland, A.~Mense, and J.~Davidson.
+\newblock {Electric sheath and presheath in a collisionless, finite ion
+  temperature plasma}.
+\newblock {\em The Physics of Fluids}, 23(4), 1980.
+
+\bibitem{MAST_SOL}
+F.~Militello, W.~Fundamenski, V.~Naulin, and A.~H. Nielsen.
+\newblock Simulations of edge and scrape off layer turbulence in mega ampere
+  spherical tokamak plasmas.
+\newblock {\em Plasma Physics and Controlled Fusion}, 54(9):095011, 2012.
+
+\bibitem{bible}
+C.~Birdsall and A.~Langdon.
+\newblock {\em Plasma physics via computer simulation}.
+\newblock Series in plasma physics. Taylor \& Francis, New York, 2005.
+\newblock Originally published: New York ; London : McGraw-Hill, 1985.
+
+\bibitem{stangeby-angles}
+P.C. Stangeby.
+\newblock The chodura sheath for angles of a few degrees between the magnetic
+  field and the surface of divertor targets and limiters.
+\newblock {\em Nuclear Fusion}, 52(8):083012, 2012.
+
+\bibitem{Wesson}
+J.~Wesson and J.~Connor.
+\newblock {\em Tokamaks / John Wesson ; with contributions from J.W. Connor ...
+  [et al.]}.
+\newblock Clarendon Press Oxford ; New York, 1987.
+
+\bibitem{adamekfast}
+J.~Ad{\'a}mek, J.~Seidl, R~P{\'a}nek, M.~Komm, P~Vondr{\'a}{\v{c}}ek,
+  J~St{\"o}ckel, et~al.
+\newblock Fast measurements of the electron temperature in divertor region of
+  the compass tokamak using ball-pen probe.
+\newblock {\em 42nd EPS Conference on Plasma Phys}, 39, 2015.
+
+\bibitem{mirabelle}
+G.~Bousselin, J.~Cavalier, J.~F. Pautex, S.~Heuraux, N.~Lemoine, and
+  G.~Bonhomme.
+\newblock Design and validation of the ball-pen probe for measurements in a
+  low-temperature magnetized plasma.
+\newblock {\em Review of Scientific Instruments}, 84(1):013505, 2013.
+
+\bibitem{bpp_diameter}
+R.~Schrittwieser, C.~Ionita, J.~Ad{\'a}mek, J.~St{\"o}ckel,
+  J.~Brot{\'a}nkov{\'a}, E.~Martines, G.~Popa, C.Costin, L.~van~de Peppel, and
+  G.~Van Oost.
+\newblock Direct measurements of the plasma potential by katsumata-type probes.
+\newblock {\em Czechoslovak Journal of Physics}, 56(2):B145--B150, 2006.
+
+\end{thebibliography}

@@ -1,0 +1,31 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {algocf}{\numberline {1}{\ignorespaces Algorithm to select the cheapest solution\relax }}{30}{algocf.78}
+\contentsline {algocf}{\numberline {2}{\ignorespaces Algorithm to calculate NTUmin bids\relax }}{39}{algocf.137}
+\addvspace {10\p@ }
+\contentsline {algocf}{\numberline {3}{\ignorespaces Reduce M$k$C{} to SP$k$\relax }}{68}{algocf.237}
+\contentsline {algocf}{\numberline {4}{\ignorespaces Convert Solution from M$k$C{} to SP$k$\relax }}{68}{algocf.248}
+\contentsline {algocf}{\numberline {5}{\ignorespaces Convert Solution from SP$k${} to M$k$C\relax }}{68}{algocf.254}
+\contentsline {algocf}{\numberline {6}{\ignorespaces Convert Solution from SP$3${} to SP$2$\relax }}{71}{algocf.270}
+\contentsline {algocf}{\numberline {7}{\ignorespaces Simplify the Solution to SP$2$\relax }}{72}{algocf.280}
+\contentsline {algocf}{\numberline {8}{\ignorespaces Convert a Solution for SP$2${} to SP$3$\relax }}{72}{algocf.289}
+\contentsline {algocf}{\numberline {9}{\ignorespaces Approximation Algorithm for \textup {SP$k$}\relax }}{75}{algocf.303}
+\contentsline {algocf}{\numberline {10}{\ignorespaces Creating an Example Showing a Lower Bound for \textup {$\mathcal {P}$}.\relax }}{78}{algocf.329}
+\contentsline {algocf}{\numberline {11}{\ignorespaces Partial Solution Approximation Algorithm for \textup {SP$k$}\relax }}{80}{algocf.347}
+\contentsline {algocf}{\numberline {12}{\ignorespaces Greedy Algorithm for Shortest-path with $k$-sets\relax }}{80}{algocf.362}
+\addvspace {10\p@ }
+\contentsline {algocf}{\numberline {13}{\ignorespaces A Class of Descending Price Auctions\relax }}{89}{algocf.384}
+\contentsline {algocf}{\numberline {14}{\ignorespaces A Uniformly Descending Price Auction\relax }}{92}{algocf.405}
+\contentsline {algocf}{\numberline {15}{\ignorespaces A Class of Ascending Price Auctions\relax }}{94}{algocf.425}
+\contentsline {algocf}{\numberline {16}{\ignorespaces A Class of Ascending from Zero Auctions\relax }}{95}{algocf.440}
+\contentsline {algocf}{\numberline {17}{\ignorespaces A Uniformly Ascending Price Auction\relax }}{97}{algocf.455}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

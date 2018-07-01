@@ -1,0 +1,58 @@
+Potential Candidates 
+SPICE3 FULLY 3d CARTESIAN, USED TO MODEL PROBES ALREADY, ABLE TO ADJUST THE MAGNETIC FIELD INCLINATION. Used to understand anamolous behaviour of Katsumata Probe, discovered presence of an EXB drift which was not predicted theoretically.  lacks plasma surface interactions as far as i can tell, need to add variable probe geometries, flush mounted etc. Has been benchmarked against SPICE2 a 2d code which in turn was benchmarked against experiment. Developed by Dr Michael Komm \cite{SPICE3}. Ability to add arbitrary shaped electrodes reference. SPICE2 used to simulate sheath and magnetic pre-sheath of PFCs in tokamaks
+
+
+OSIRIS- Widely used code, used at RAL, told it only takes a couple of days to get to grips with. Collaboration between UCLA, IST Lisbon and RAL. IST student mentioned that someone there has been planning to apply the code to the ball pen probe but has not got around to it. shows it probably is suitable. 
+
+
+Vsim- based on VORPAL.  3D. Can add new physics to it using Python? 
+
+iPIC3D - a C++ and MPI Particle-in-Cell code for the simulation of space and fusion plasmas. Has been used to study the interactions of satellites with plasmas to determine the floating potential. https://lirias.kuleuven.be/handle/123456789/451440 
+
+
+SPIS-  current European reference tool in spacecraft-plasma interactions modelling and is world-widely used today. Open-source, SPIS is maintained in the frame of the SPINE community, gathering more than 700 registered users around the world. Integrating a 3D electrostatic Particle-In-Cell (PIC) model on unstructured mesh, SPIS is able to model the detailed dynamics of the whole plasma sheath around the spacecraft and the electrostatic evolutions of this last one. SPIS is regularly used for commercial or scientific missions and in various fields like in plasma propulsion. Not sure how hard it would be to add B field.  Used to study effect of photoemission on languir probe measurements on board rosetta spacecraft HAVE REFERENCE $http://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=8&ved=0CEoQFjAH&url=http%3A%2F%2Fwww.space.irfu.se%2Faie%2FSjogren2010a.pdf&ei=7WJ8VJzDDIat7ga_-oCoBw&usg=AFQjCNEPRRzEep438EAqvj6-VRQ7fJW7Nw&sig2=makEi2nbIVnWIGLvJy3lmw&bvm=bv.80642063,d.ZGU$
+It may be written in Java, so too slow possibly. 
+
+XOOPIC -used for simuations of STP segmented tunnel probe on CASTOR tokamak in 2005. 
+
+CFHall code- MAYBE  
+
+
+ICEPIC- fully 3d,3v electromagnetic http://ptsg.eecs.berkeley.edu/~jhammel/CS267/assignment0.html 
+
+JUSPIC - Julic http://www.fz-juelich.de/ias/jsc/EN/AboutUs/Organisation/ComputationalScience/Simlabs/slpp/SoftwareJuSPIC/_node.html
+
+
+EMPIC- 3d,3v electromangetic to simulate devices with curved surfaces, uses body fitted coordinates in three dimensions http://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=6&ved=0CDkQFjAF&url=http%3A%2F%2Fsoftlib.rice.edu%2Fpub%2FCRPC-TRs%2Freports%2FCRPC-TR96731.pdf&ei=D4R8VMbOC8at7AaYqIHQCw&usg=AFQjCNE4WgI65yDXVjOX-PbO2ccJL-p25w&sig2=eAkWV8Z0uo6Hx4SMw1Mpnw&bvm=bv.80642063,d.ZGU&cad=rja 
+
+
+Magic3d - useful to introduce new geometries 
+http://www.mrcwdc.com/Magic/description.html
+
+TRISTAN 3d,3v used to model interaction of IMF with magnetoshere http://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=11&ved=0CCoQFjAAOAo&url=http%3A%2F%2Fon-demand.gputechconf.com%2Fgtc%2F2012%2Fposters%2FP0512_GPU_3D_EMPIC_in_VORPAL_Amyx.pdf&ei=K4d8VNTGBeOu7Abcw4HgAw&usg=AFQjCNHVJgW-O6yuvpuiBgrVCmeH5_gzvg&sig2=6IHKrr8LSwAG6ruUrSEhTg&bvm=bv.80642063,d.ZGU
+
+
+SUR - http://link.springer.com/article/10.1140/epjd/e2006-00044-0#page-1 
+been complimented by plasma surface interaction processes leading to helium blisttering into metal lattice
+
+Interesting idea to measure floating potential - The redistribution of charge over a conducting body is non-trivial and therefore,
+the code used in this work solves the problem of finding the spacecraft potential in
+a different way, using the fact that at the floating potential, the current collected by
+an object in a plasma is zero. The simulation is first run with the object potential
+fixed to some value, and the amount of collected charge is kept track of. At the end
+of this simulation run, the sign of the net charge collected by the object is studied.
+If the charge is positive, it is concluded that the initial guess for the potential was
+too negative and vice versa. The code then fixates the object at a new potential for
+a second run and in this way performed a binary search for the floating potential
+until it has been locked into a small enough interval
+ http://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=20&ved=0CF8QFjAJOAo&url=http%3A%2F%2Fwww.diva-portal.org%2Fsmash%2Fget%2Fdiva2%3A524800%2FFULLTEXT01.pdf&ei=YWt8VNuRLcq67gbaqYFA&usg=AFQjCNHIEbarpJ074Zir6THSyTzkbQJyMQ&sig2=J8muQCA8kzg5OFzwh52u_A
+
+PAPERS TO LOOK UP AT WORK- http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=8102164 
+
+http://arc.aiaa.org/doi/abs/10.2514/6.2012-991 
+
+
+Magnetron modelling - http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=5193550&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D5193550 
+
+
+

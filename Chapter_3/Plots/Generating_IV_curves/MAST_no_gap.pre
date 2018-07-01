@@ -1,0 +1,1010 @@
+
+######################################################################
+#
+# $Rev: 2209 $ $Date: 2014-05-22 17:47:08 -0600 (Thu, 22 May 2014) $
+#
+# Copyright &copy; 1999-2002, University of Colorado
+# Copyright &copy; 2002-2012, University of Colorado and
+#                             Tech-X Corporation
+# See the VSim license file for conditions of use.
+#
+######################################################################
+
+<XSim esPtclInCell>
+  shortDescription = "Electrostatic Particle in Cell"
+  description = "Electrons in a box with conducting walls and particle absorbers, and with an immobile, background neutralizing charge density."
+  longDescription = "This is a simulation of electrons in a box with conducting walls and particle absorbers, and with an immobile, background neutralizing charge density.   The electfrons move to the walls, creating a sheath."
+  image = "esPtclInCellNeumann.png"
+  thumbnail = "esPtclInCellTn.png"
+  canChangeDt = true
+  canChangeNdim = true
+  analyzers = [computePtclNumDensity.py]
+</XSim>
+
+##########
+#
+# Primary variables
+#
+##########
+# Variables for simulation parameters
+$NDIM = 1 # Number of dimensions in simulation (1, 2, or 3
+
+# Steps per plasma period
+$STEPS_PER_PLASMA_OSC = 20.
+
+# Number of steps to run simulation
+$ NSTEPS = 170000
+$ DUMPPER = 2000
+#$ NSTEPS = 20
+#$ DUMPPER = 10
+
+# Increase Resolution 
+$ RES = 1
+
+# Variables for the grid input block
+# Number of cells along x, y, and z axes
+$NX = 400
+$NY = RES * 42
+$NZ = RES * 42
+$SRC = 200
+$WALL = 400
+# Length of grid along x, y, and z axes
+$LX = 0.04
+$LY = 0.004
+$LZ = 0.005
+
+$probe_V = -70.
+# Electron characteristics
+$TE_EV = 5.
+$NE = 2.5e15
+$PTCLSPERCELL = 50.
+$ TI_EV = 5.
+
+# Magnetic field
+$BXRATIO = 0.
+$BYRATIO = 0.
+$BZRATIO = 0.
+
+# Voltage
+$V_RIGHT = 0.
+
+# Periodic directions
+$X_PERIODIC = 0
+$Y_PERIODIC = 1
+$Z_PERIODIC = 1
+
+
+
+# Determines if heavy particles are born
+$ HEAVY = 0
+$ TEST = 0 #reflecting BC on both sides to test injection
+##########
+#
+# Exposed variables
+#
+##########
+
+<XVar probe_V>
+  description = "Voltage applied to probe"
+</XVar>
+
+# Number of cells along x
+<XVar NDIM>
+  description = "Number of dimensions"
+  min = 1
+  max = 3
+</XVar>
+
+# Number of time steps per plasma oscillation
+<XVar STEPS_PER_PLASMA_OSC>
+  description = "Number of time steps per plasma oscillation"
+</XVar>
+
+# Number of cells along x
+<XVar NX>
+  description = "Number of cells along x"
+</XVar>
+
+# Number of cells along y
+<XVar NY>
+  description = "Number of cells along y"
+</XVar>
+
+# Number of cells along z
+<XVar NZ>
+  description = "Number of cells along z"
+</XVar>
+
+# length of grid along x
+<XVar LX>
+  description = "length of grid along x"
+</XVar>
+
+# length of grid along y
+<XVar LY>
+  description = "length of grid along y"
+</XVar>
+
+# length of grid along z
+<XVar LZ>
+  description = "length of grid along z"
+</XVar>
+
+# Electron temperature in eV
+<XVar TE_EV>
+  description = "Electron temperature in eV"
+</XVar>
+
+# Electron density in 1/m^3
+<XVar NE>
+  description = "Electron density in 1/m^3"
+</XVar>
+
+# Electron macroparticles per cell
+<XVar PTCLSPERCELL>
+  description = "Electron macroparticles per cell"
+</XVar>
+
+# Voltage
+<XVar V_RIGHT>
+  description = "Voltage"
+</XVar>
+
+# Ratios of cyclotron frequencies to plasma frequency
+<XVar BXRATIO>
+  description = "Ratio (e Bx/m omega_p) of Bx cyclotron frequency to plasma frequency"
+</XVar>
+<XVar BYRATIO>
+  description = "Ratio (e By/m omega_p) of By cyclotron frequency to plasma frequency"
+</XVar>
+<XVar BZRATIO>
+  description = "Ratio (e Bz/m omega_p) of Bz cyclotron frequency to plasma frequency"
+</XVar>
+
+# Whether periodic in x
+<XVar X_PERIODIC>
+  description = "Whether periodic in x. false = 0."
+</XVar>
+
+# Whether periodic in y
+<XVar Y_PERIODIC>
+  description = "Whether periodic in y. false = 0."
+</XVar>
+
+# Whether periodic in a
+<XVar Z_PERIODIC>
+  description = "Whether periodic in z. false = 0."
+</XVar>
+
+
+
+
+
+##########
+#
+# Import values and macros
+#
+##########
+
+$ import mathphys
+$ import matrix
+$ import solverbcs
+
+##########
+#
+# Define variables in lines starting with $ for later use
+#
+##########
+
+# Periodic directions
+$ PER = [X_PERIODIC, Y_PERIODIC, Z_PERIODIC]
+$ PER_DIRS = [ i for i in range(3) if PER[i]]
+$ ALL_PER = X_PERIODIC*Y_PERIODIC*Z_PERIODIC
+
+# Location of start point along x, y, and z axes in SI units
+$ XBGN = 0.000
+$ YBGN = -0.5*LY
+$ ZBGN = -0.5*LZ
+
+# Number of cells along x, y, and z axes plus the guard cell
+$ NXP = NX + 1
+$ NYP = NY + 1
+$ NZP = NZ + 1
+
+# Gradient for boundary conditions
+$ GRAD_POTENTIAL = V_RIGHT/LX
+
+# Coefficients for the Poisson solve
+$ DX = LX/NX
+$ DY = LY/NY
+$ DZ = LZ/NZ
+$ DXI = 1./DX
+$ DYI = 1./DY
+$ DZI = 1./DZ
+$ XDIFF = - EPSILON0*DXI*DXI
+$ YDIFF = - EPSILON0*DYI*DYI
+$ ZDIFF = - EPSILON0*DZI*DZI
+$ POISSONDIAG = -2.*(XDIFF + (NDIM > 1)*YDIFF + (NDIM > 2)*ZDIFF)
+
+# Compute the Debye length
+$ BGCHARGEDEN = NE*ELEMCHARGE
+$ TE_JOULE = TE_EV*ELEMCHARGE
+$ TI_JOULE = TI_EV*ELEMCHARGE
+# By convention we use VETH=sqrt(TE/m_e), not VETH=sqrt(2TE/m_e)
+
+$ IONMASS =  $100.*ELECMASS $
+$ VETH = math.sqrt(TE_JOULE/ELECMASS)
+$ VITH = math.sqrt(TI_JOULE/IONMASS)
+$ VIS = math.sqrt(TE_JOULE/IONMASS)
+$ OMP2 = NE*ELEMCHARGE*ELEMCHARGE/(ELECMASS*EPSILON0)
+$ OMP = math.sqrt(OMP2)
+$ FP = OMP/(2.*PI)
+$ PLASMA_PERIOD = 1./FP
+$ DEBYELEN = VETH/OMP
+# Find minimum of DL's
+$ DLMIN1 = DX + (NDIM>1)*((DX < DY)*DX + (DY <= DX)*DY - DX)
+$ DLMIN = DLMIN1 + (NDIM>1)*((DLMIN1 < DZ)*DLMIN1 + (DZ <= DLMIN1)*DZ - DLMIN1)
+$ DEBYERES = DEBYELEN/(DLMIN)
+
+# Find magnetic fields
+$ BEQ = ELECMASS*OMP/ELEMCHARGE
+$ BX = BEQ*BXRATIO
+$ BY = BEQ*BYRATIO
+$ BZ = BEQ*BZRATIO
+
+# Duration of time step for small step in electron plasma period
+#$ DT = PLASMA_PERIOD/STEPS_PER_PLASMA_OSC
+
+$ DT = 1.E-11
+
+$E_RATE = VETH*DT/(DX/(PTCLSPERCELL))
+$I_RATE = VITH*DT/(DX/(PTCLSPERCELL))
+
+##########
+#
+# Define the simulation parameters
+#
+##########
+
+# Floating condition on the RHS wall
+$ EXP = 2.
+
+
+# The dimension and precision of the simulation
+dimension = NDIM
+floattype = double
+
+# Time step and number of steps
+dt = DT
+nsteps = NSTEPS # For a simple example
+
+# Dump output into an HDF5 file every 10 time steps
+dumpPeriodicity = DUMPPER
+
+##########
+#
+# Define the grid: the physical problem and the number of cells
+#
+##########
+
+<Grid globalGrid>
+  kind = uniCartGrid
+  numCells       = [ NX     NY     NZ]
+  lengths        = [ LX     LY     LZ]
+  startPositions = [ XBGN   YBGN   ZBGN]
+</Grid>
+
+##########
+#
+# Define the decomposition
+#
+##########
+
+<Decomp decomp>
+  kind = regular
+  periodicDirs = PER_DIRS # The periodic directions
+</Decomp>
+
+##########
+#
+# Define the ES field and its solver; describe the ES fields
+# boundary conditions
+#
+##########
+
+<MultiField esField>
+
+# Charge density for deposition
+  <Field rho>
+    kind = depField
+    numComponents = 1
+    overlap = [1 1]
+    offset = none
+  </Field>
+
+# Electric potential (on the nodes)
+  <Field phi>
+    numComponents = 1
+    overlap = [1 1]
+    offset = none
+  </Field>
+
+# Electric field on the edges
+  <Field edgeE>
+    numComponents = 3
+    overlap = [1 1]
+    offset = edge
+  </Field>
+
+# Electric field on the nodes
+  <Field nodalE>
+    numComponents = 3
+    overlap
+  </Field>
+
+# Magnetic field on the nodes; not updated
+  <Field nodalB>
+    numComponents = 3
+    overlap = [1 1]
+    offset = none
+    <InitialCondition initB>
+      kind = varset
+      lowerBounds = [  0   0   0]
+      upperBounds = [NXP NYP NZP]
+      components = [0 1 2]
+      <STFunc component0>
+        kind = expression
+        expression = BX
+      </STFunc>
+      <STFunc component1>
+        kind = expression
+        expression = BY
+      </STFunc>
+      <STFunc component2>
+        kind = expression
+        expression = BZ
+      </STFunc>
+    </InitialCondition>
+  </Field>
+
+  <FieldUpdater neutralize>
+    kind = STFuncUpdater
+    operation = add
+    lowerBounds = [0 0 0]
+    upperBounds = [NXP NYP NZP]
+    writeFields = [rho]
+    component = 0
+    cellsToUpdateAboveDomain = [0 1 1]
+    <STFunc f>
+      kind = constantFunc
+      amplitude = BGCHARGEDEN
+    </STFunc>
+  </FieldUpdater>
+
+# ES solve
+  <FieldUpdater esSolve>
+
+# Bounds taking periodicity or lack into account.
+# If periodic, no need to solve for the upper row, as
+# it comes from periodicity.  If are periodic, must
+# solver for the lower row, as there is no boundary
+# condition there.
+$ NXL = 1 - X_PERIODIC
+$ NYL = 1 - Y_PERIODIC
+$ NZL = 1 - Z_PERIODIC
+$ NXU = NXP - X_PERIODIC
+$ NYU = NYP - Y_PERIODIC
+$ NZU = NZP - Z_PERIODIC
+
+    kind = linearSolveUpdater
+    verbosity = VP_DEBUG
+    lowerBounds = [  0   0  0]
+    upperBounds = [NXU NYU NZU]
+ #   lowerBounds = [  0   0  0]
+  #  upperBounds = [NXP NYP NZ]
+    readFields = [rho]
+    readComponents = [0]
+    writeFields = [phi]
+    writeComponents = [0]
+    writeEquationToFile = false
+
+# interior: Laplacian
+    <MatrixFiller interiorFiller>
+      kind = stencilFiller
+      minDim = 1
+      lowerBounds = [ NXL NYL NZL]
+      upperBounds = [NX NY NZ]
+ #     lowerBounds = [ 1 0 0]
+ #     upperBounds = [NX NY NZ]
+      componentBounds = [0 1]
+      StencilElementMacro(int_dd, POISSONDIAG, 0, [ 0  0  0], 0, 0)
+      StencilElementMacro(int_px,       XDIFF, 1, [ 1  0  0], 0, 0)
+      StencilElementMacro(int_mx,       XDIFF, 1, [-1  0  0], 0, 0)
+      StencilElementMacro(int_py,       YDIFF, 2, [ 0  1  0], 0, 0)
+      StencilElementMacro(int_my,       YDIFF, 2, [ 0 -1  0], 0, 0)
+      StencilElementMacro(int_pz,       ZDIFF, 3, [ 0  0  1], 0, 0)
+      StencilElementMacro(int_mz,       ZDIFF, 3, [ 0  0 -1], 0, 0)
+    </MatrixFiller>
+
+# iterative solver
+    <LinearSolver mySolver>
+      kind = iterativeSolver
+      <BaseSolver myBS>
+        # gmres/cg/cgs/tfqmr/bicgstab
+        kind = gmres
+      </BaseSolver>
+      <Preconditioner precond>
+        ## (Aztec) none/jacobi/neumann/leastSquares/symmetricGaussSeidel/
+        ##+         domainDecomposition
+        ## (ML) multigrid
+        kind = multigrid
+        # SA (symmetric systems), DD, DD-ML, maxwell
+        mgDefaults = SA
+        # max number of multigrid levels
+        # maxLevels = 30
+        # SA: GaussSeidel, SymBlockGaussSeidel, Jacobi, Chebyshev; DD/DD-ML: Aztec
+        # smootherType = SymBlockGaussSeidel
+        # number of smoothing sweeps
+        # smootherSweeps = 3
+        # when to smooth (pre, post, both)
+        # smootherPrePost = both
+        # coarse grid solver (Jacobi or KLU)
+        # coarseType = KLU
+        # dampingFactor = 1.333333
+        # threshold = 0.0
+        # increaseDecrease = increasing
+      </Preconditioner>
+      tolerance = 1.e-8
+      maxIterations = 1000
+    </LinearSolver>
+
+# Write the interior from rho
+    <VectorWriter interiorWrite>
+      kind = fieldVectorWriter
+      minDim = 1
+      lowerBounds = [ 1  1  1]
+      upperBounds = [NX NY NZ]
+      componentBounds = [0 1]
+      readField = rho
+      readComponent = 0
+    </VectorWriter>
+
+# reading of lhs vector to field
+    <VectorReader phiReader>
+      kind = fieldVectorReader
+      minDim = 0
+      writeField = phi
+      writeComponent = 0
+      lowerBounds = [ 0 0 0]
+      upperBounds = [NXP NYP NZP]
+      componentBounds = [0 1]
+    </VectorReader>
+
+# Boundary conditions
+# lf (left) = min x, rt (right) = max x
+# lo (lower) = min y, up (upper) = max y,
+# ba (back) = min z, fr (front) = max z
+$ PERIODIC_DIRECTIONS = [ X_PERIODIC,  Y_PERIODIC,  Z_PERIODIC ]
+$ if PERIODIC_DIRECTIONS == [0 ,1, 1] 
+dirichletBC(lfWall, 1, 0, 0, 0, 1, NYU, NZU, 0, 0., 1.0)
+dirichletBC(rtWall, 1, NX, 0, 0, NXP, NYU, NZU, 0, probe_V, 1.0)
+#dirichletBC(Src, 1, $SRC$, 0, 0, $SRC+1$, NYU, NZU, 0, 0., 1.0)
+#neumannBC(rtWall, 1, NX, 0, 0, NXP, NYU, NZU, 0, EXP, -1, 1, 1.0)
+#neumannBC(lfwall, 1, 0, 0, 0, 1, NYU, NZU, 0, 0., 0, 1, 1.0)
+
+
+$ endif
+
+$ if PERIODIC_DIRECTIONS == [ 1, 0, 1] 
+dirichletBC(loWall, 1,  0, 0, 0, NXU,  1,  NZU, 0,x*GRAD_POTENTIAL, 1.0)
+dirichletBC(upWall, 1, 0, NY, 0, NXU, NYP, NZU, 0,x*GRAD_POTENTIAL, 1.0)
+$ endif
+
+$ if PERIODIC_DIRECTIONS == [ 1, 1, 0] 
+  $ if NDIM == 3
+    dirichletBC(baWall, 1,  0, 0, 0, NXU, NYU, 1,    0, x*GRAD_POTENTIAL, 1.0)
+    dirichletBC(frWall, 1,  0, 0, NZ,NXU, NYU, NZP,  0,x*GRAD_POTENTIAL, 1.0)
+  $ endif
+$ endif
+
+
+$ if PERIODIC_DIRECTIONS == [ 0, 0, 1] 
+  dirichletBC(lfWall, 1,  0, 0, 0,   1, NYU, NZU, 0,      0., 1.0)
+  dirichletBC(rtWall, 1, NX, 0, 0, NXP, NYU, NZU, 0, V_RIGHT, 1.0)
+  dirichletBC(loWall, 2, 1,  0, 0, NX ,   1, NZU, 0, x*GRAD_POTENTIAL, 1.0)
+  dirichletBC(upWall, 2, 1, NY, 0, NX , NYP, NZU, 0, x*GRAD_POTENTIAL, 1.0)
+$ endif
+
+$ if PERIODIC_DIRECTIONS == [ 1, 0, 0] 
+  dirichletBC(loWall, 1, 0, 0 , 0, NXU, 1,   NZU, 0,x*GRAD_POTENTIAL, 1.0)
+  dirichletBC(upWall, 1, 0, NY, 0, NXU, NYP, NZU, 0,x*GRAD_POTENTIAL, 1.0)
+    $ if NDIM == 3
+      dirichletBC(baWall, 1,  0, 1, 0, NX, NY, 1, 0, x*GRAD_POTENTIAL, 1.0)
+      dirichletBC(frWall, 1,  0, 1, NZ,NX, NY, NZP, 0,x*GRAD_POTENTIAL, 1.0)
+    $ endif
+$ endif
+
+$ if PERIODIC_DIRECTIONS == [ 0, 1, 0] 
+  dirichletBC(lfWall, 1,  0, 0, 0,   1, NYU, NZU, 0,      0., 1.0)
+  dirichletBC(rtWall, 1, NX, 0, 0, NXP, NYU, NZU, 0, V_RIGHT, 1.0)
+    $ if NDIM == 3
+      dirichletBC(baWall, 1,  1, 0, 0, NX, NYU, 1, 0, x*GRAD_POTENTIAL, 1.0)
+      dirichletBC(frWall, 1,  1, 0, NZ,NX, NYU, NZP, 0,x*GRAD_POTENTIAL, 1.0)
+    $ endif
+$ endif
+
+
+$ if PERIODIC_DIRECTIONS == [ 0, 0, 0] 
+dirichletBC(lfWall, 1,  0, 0, 0,   1, NYU, NZU, 0,      0., 1.0)
+dirichletBC(rtWall, 1, NX, 0, 0, NXP, NYU, NZU, 0, V_RIGHT, 1.0)
+dirichletBC(loWall, 2, 1,  0, 0, NX,   1, NZU, 0, x*GRAD_POTENTIAL, 1.0)
+dirichletBC(upWall, 2, 1, NY, 0, NX, NYP, NZU, 0, x*GRAD_POTENTIAL, 1.0)
+    $ if NDIM == 3
+      dirichletBC(baWall, 2, 1, 1,  0, NX, NY,   1, 0, x*GRAD_POTENTIAL, 1.0)
+      dirichletBC(frWall, 2, 1, 1, NZ, NX, NY, NZP, 0, x*GRAD_POTENTIAL, 1.0)
+    $ endif
+$ endif
+
+
+
+#$ if ALL_PER
+#    dirichletBC(corner, 1, 0, 0, 0, 1, 1, 1, 0, 0., 1.0)
+#$ endif
+
+  </FieldUpdater>
+
+# Gradient of phi gives E
+  <FieldUpdater gradPhi>
+    kind = gradVecUpdater
+    factor = -1.
+    lowerBounds = [ 0  0  0]
+    upperBounds = [NX NY NZ]
+    readFields = [phi]
+    writeFields = [edgeE]
+  </FieldUpdater>
+
+# Edge to nodes
+  <FieldUpdater edgeToNode>
+    kind = edgeToNodeVec
+    lowerBounds = [  0   0   0]
+    upperBounds = [NXP NYP NZP]
+    readFields = [edgeE]
+    writeFields = [nodalE]
+  </FieldUpdater>
+
+# Boundary edge to node is a copy
+  <FieldUpdater copyPerimLeft>
+    kind = unaryFieldOpUpdater
+    minDim = 1
+    lowerBounds = [0   0   0]
+    upperBounds = [1 NYP NZP]
+    operation = set
+    bumpReadIter = [0 0 0]
+    readFields = [edgeE]
+    component = 0
+    writeFields = [nodalE]
+    <STFunc copyFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+  </FieldUpdater>
+
+# Boundary edge to node is a copy
+  <FieldUpdater copyPerimRight>
+    kind = unaryFieldOpUpdater
+    minDim = 1
+    lowerBounds = [NX    0   0]
+    upperBounds = [NXP NYP NZP]
+    operation = set
+    bumpReadIter = [-1 0 0]
+    readFields = [edgeE]
+    component = 0
+    writeFields = [nodalE]
+    <STFunc copyFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+  </FieldUpdater>
+
+#
+# Update steps
+#
+<Comment>
+ Add in neutralizing charge
+  <UpdateStep step1>
+   toDtFrac = 1.
+    updaters = [neutralize]
+  </UpdateStep>
+</Comment>
+# Electrostatic solve
+  <UpdateStep step1>
+    toDtFrac = 1.
+    updaters = [esSolve]
+    messageFields = [phi]
+  </UpdateStep>
+
+# Compute fields on Yee mesh
+  <UpdateStep step2>
+    toDtFrac = 1.
+    updaters = [gradPhi]
+    messageFields = [edgeE]
+  </UpdateStep>
+
+# Compute nodal E
+  <UpdateStep step3>
+    toDtFrac = 1.0
+    updaters = [edgeToNode copyPerimLeft copyPerimRight]
+    messageFields = [nodalE]
+  </UpdateStep>
+
+</MultiField>
+
+##########
+#
+# Define the particles, their sources, and their sinks
+#
+##########
+
+<ScalarDepositor rhoDep>
+  kind = areaWeighting
+  depField = esField.rho
+</ScalarDepositor>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#<STFunc ionNumber>
+ # kind = historySTFunc
+  #feedback = ionCurrent
+  #expression = $ dt $
+#</STFunc>
+
+
+
+
+# The particles are electrons
+<Species electrons>
+  kind = nonRelBoris
+  #charge = ELEMCHARGE
+	#charge = ELECCHARGE
+	charge = ELECCHARGE
+ #mass = $ 100*ELECMASS $
+	mass = ELECMASS
+  nominalDensity = NE
+  nomPtclsPerCell = PTCLSPERCELL
+  maxcellxing = 1
+  chargeDeps = [rhoDep]
+  fields = [esField.nodalE esField.nodalB]
+	
+
+
+
+# The particle source is the entire grid
+  <ParticleSource electronSrc>
+    kind = xvLoaderEmitter
+		#load=true 
+		#loadAfterInit = true 
+		#applyTimes = [0. 10.e-10]
+# Load particles in the full slab for the first time step
+ <PositionGenerator bitRevSlab>
+      kind = bitRevSlabPosGen
+      <Slab loadSlab>
+       # lowerBounds = [XBGN       YBGN      ZBGN]
+        #upperBounds = [$XBGN +LX/2$ $YBGN+LY/2. -DY$ $ZBGN + LZ/2. -DZ$]
+			lowerBounds = [$XBGN$       YBGN      ZBGN]
+      upperBounds = [$XBGN +WALL*DX$ $YBGN$ ZBGN]
+      </Slab>
+      ptclsPerCell = PTCLSPERCELL
+			
+    </PositionGenerator>
+
+
+# No density function, so constant at unity
+    <STFunc relMacroDenFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+
+# Gaussian in all directions
+ <VelocityGenerator emitVelGen>
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 309
+      kind=funcVelGen
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 310
+      
+      <STFunc component0>
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 311
+        kind=expression
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 312
+        expression=gauss(VETH, 0.)
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 313
+      </STFunc>
+	
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+	</VelocityGenerator>
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+
+  </ParticleSource>  
+  <ParticleSource electronEmmert>
+    kind = xvLoaderEmitter
+		load=true 
+		loadAfterInit = true 
+		#applyTimes = [0. 10.e-10]
+# Load particles in the full slab for the first time step
+ <PositionGenerator bitRevSlab>
+      kind = bitRevSlabPosGen
+      <Slab loadSlab>
+       # lowerBounds = [XBGN       YBGN      ZBGN]
+        #upperBounds = [$XBGN +LX/2$ $YBGN+LY/2. -DY$ $ZBGN + LZ/2. -DZ$]
+			lowerBounds = [$XBGN$       YBGN      ZBGN]
+      upperBounds = [$XBGN +DX$ $YBGN$ ZBGN]
+      </Slab>
+      ptclsPerCell = $E_RATE$
+			
+    </PositionGenerator>
+
+
+# No density function, so constant at unity
+    <STFunc relMacroDenFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+
+# Gaussian in all directions
+ <VelocityGenerator emitVelGen>
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 309
+      kind=funcVelGen
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 310
+      
+      <STFunc component0>
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 311
+        kind=expression
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 312
+        expression= sqrt(-2.*ELEMCHARGE * TE_EV/ELECMASS * log(1-rand()))
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 313
+      </STFunc>
+	
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+	</VelocityGenerator>
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+
+  </ParticleSource>
+
+   
+
+# Boundary condition that refluxes particles
+  <ParticleSink xLowerAbsorber>
+    #kind = diffuseBndry
+		kind = absAndSav
+	#kind = specularBndry 
+    minDim = 1
+		surface = XBGN
+    lowerBounds = [-1  -1  -1]
+    upperBounds = [ 0 NYP NZP]
+		direction = [-1. 0. 0.]
+
+
+  </ParticleSink>
+# Boundary condition that removes particles at upper-x end of grid
+
+
+
+
+  <ParticleSink xUpperAbsorber>
+    kind = absAndSav
+		#kind = specularBndry 
+		direction = [1. 0. 0.]
+    minDim = 1
+    lowerBounds = [$WALL$  -1  -1]
+    upperBounds = [$WALL+1$ NYP NZP]
+  </ParticleSink>
+
+</Species>
+
+
+
+
+
+<History numPhysElectrons>
+kind = speciesNumPhysical
+species = [electrons]
+</History>
+
+
+
+
+<Species ions>
+  kind = nonRelBoris
+  #charge = ELEMCHARGE
+	#charge = ELECCHARGE
+	charge = ELEMCHARGE
+ #mass = $ 100*ELECMASS $
+	mass = IONMASS
+  nominalDensity = NE
+  nomPtclsPerCell = PTCLSPERCELL
+  maxcellxing = 1
+  chargeDeps = [rhoDep]
+  fields = [esField.nodalE esField.nodalB]
+	
+
+
+
+# The particle source is the entire grid
+  <ParticleSource ionSrc>
+    kind = xvLoaderEmitter
+		#load=true 
+		#loadAfterInit = true 
+		#applyTimes = [0. 10.e-10]
+# Load particles in the full slab for the first time step
+ <PositionGenerator bitRevSlab>
+      kind = bitRevSlabPosGen
+      <Slab loadSlab>
+       # lowerBounds = [XBGN       YBGN      ZBGN]
+        #upperBounds = [$XBGN +LX/2$ $YBGN+LY/2. -DY$ $ZBGN + LZ/2. -DZ$]
+			lowerBounds = [$XBGN$       YBGN      ZBGN]
+      upperBounds = [$XBGN +WALL*DX$ $YBGN$ ZBGN]
+      </Slab>
+      ptclsPerCell = PTCLSPERCELL
+			
+    </PositionGenerator>
+
+
+# No density function, so constant at unity
+    <STFunc relMacroDenFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+
+# Gaussian in all directions
+ <VelocityGenerator emitVelGen>
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 309
+      kind=funcVelGen
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 310
+      
+      <STFunc component0>
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 311
+        kind=expression
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 312
+        expression=gauss(VITH, 0.)
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 313
+      </STFunc>
+	
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+	</VelocityGenerator>
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+
+  </ParticleSource>  
+  <ParticleSource ionEmmert>
+    kind = xvLoaderEmitter
+		load=true 
+		loadAfterInit = true 
+		#applyTimes = [0. 10.e-10]
+# Load particles in the full slab for the first time step
+ <PositionGenerator bitRevSlab>
+      kind = bitRevSlabPosGen
+      <Slab loadSlab>
+       # lowerBounds = [XBGN       YBGN      ZBGN]
+        #upperBounds = [$XBGN +LX/2$ $YBGN+LY/2. -DY$ $ZBGN + LZ/2. -DZ$]
+			lowerBounds = [$XBGN$       YBGN      ZBGN]
+      upperBounds = [$XBGN +DX$ $YBGN$ ZBGN]
+      </Slab>
+      ptclsPerCell = $I_RATE$
+			
+    </PositionGenerator>
+
+
+# No density function, so constant at unity
+    <STFunc relMacroDenFunc>
+      kind = constantFunc
+      amplitude = 1.
+    </STFunc>
+
+# Gaussian in all directions
+ <VelocityGenerator emitVelGen>
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 309
+      kind=funcVelGen
+      # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 310
+      
+      <STFunc component0>
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 311
+        kind=expression
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 312
+        expression= sqrt(-2.*ELEMCHARGE * TI_EV/IONMASS * log(1-rand()))
+        # preLine: [/home/smurphys/Desktop/batch_runs/feedback/feedbackCurrent(2).pre], line 313
+      </STFunc>
+	
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+	</VelocityGenerator>
+# Only load across whole simulation at intial time step
+	#applyTimes = [0. 10000000000.] #start and end times 
+
+  </ParticleSource>
+
+   
+
+# Boundary condition that refluxes particles
+  <ParticleSink xLowerAbsorber>
+    #kind = diffuseBndry
+		kind = absAndSav
+	#kind = specularBndry 
+    minDim = 1
+		surface = XBGN
+    lowerBounds = [-1  -1  -1]
+    upperBounds = [ 0 NYP NZP]
+		direction = [-1. 0. 0.]
+
+
+  </ParticleSink>
+# Boundary condition that removes particles at upper-x end of grid
+
+
+
+
+  <ParticleSink xUpperAbsorber>
+    kind = absAndSav
+		#kind = specularBndry 
+		direction = [1. 0. 0.]
+    minDim = 1
+    lowerBounds = [$WALL$  -1  -1]
+    upperBounds = [$WALL+1$ NYP NZP]
+  </ParticleSink>
+
+</Species>
+
+
+
+
+
+<History electronCurrentRHS>
+kind = speciesAbsPtclData2
+species = [electrons]
+ptclAbsorbers = [ electrons.xUpperAbsorber]
+ptclAttributes = [current]
+collectMethod = sumForEachStep 
+
+</History>
+
+#<STFunc electronNumber>
+ # kind = historySTFunc
+  #feedback = electronCurrent
+  #expression = $ dt $
+#</STFunc>
+
+
+<History ionCurrentRHS>
+kind = speciesAbsPtclData2
+species = [ions]
+ptclAbsorbers = [ ions.xUpperAbsorber]
+ptclAttributes = [current]
+collectMethod = sumForEachStep 
+</History>
+
+
+
+
+
+
+
+
+
+
+      <History numPhysIons>
+kind = speciesNumPhysical
+species = [ions]
+</History>

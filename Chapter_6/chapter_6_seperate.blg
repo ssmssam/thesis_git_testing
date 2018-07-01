@@ -1,0 +1,111 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter_6_seperate.aux
+The style file: unsrt.bst
+Case mismatch error between cite keys low_T and low_t
+---line 38 of file chapter_6_seperate.aux
+ : \citation{low_T
+ :                }
+I'm skipping whatever remains of this command
+Database file #1: references.bib
+I was expecting a `,' or a `}'---line 130 of file references.bib
+ : 
+ : author = {Adámek, J. and Peterka, M. and Gyergyek, T. and Kudrna, P. and Ramisch, M. and Stroth, U. and Cavalier, J. and Tichý, M.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 198 of file references.bib
+ : @article{mirabelle
+ :                   ,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 265 of file references.bib
+ :   
+ :   series={Series in Plasma Physics and Fluid Dynamics},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 879 of file references.bib
+ :  @article {low_temp
+ :                    ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1094 of file references.bib
+ :  eid = 
+ :        ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1121 of file references.bib
+ :  eid = 
+ :        ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1191 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1197 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1224 of file references.bib
+ :  
+ :  %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1235 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1265 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1321 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1354 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Name 2 in "J. Ad{\'a}mek and M. Peterka, and Gyergyek, T. and Kudrna, P. and Ramisch, M. and Stroth, U. and Cavalier, J. and Tichy, M." has a comma at the end for entry low_temp
+while executing---line 944 of file unsrt.bst
+You've used 8 entries,
+            1791 wiz_defined-function locations,
+            496 strings with 4994 characters,
+and the built_in function-call counts, 1915 in all, are:
+= -- 147
+> -- 114
+< -- 0
++ -- 41
+- -- 33
+* -- 164
+:= -- 329
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 7
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 73
+empty$ -- 178
+format.name$ -- 33
+if$ -- 406
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 9
+newline$ -- 43
+num.names$ -- 8
+pop$ -- 14
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 24
+stack$ -- 0
+substring$ -- 121
+swap$ -- 8
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 16
+width$ -- 9
+write$ -- 89
+(There were 15 error messages)

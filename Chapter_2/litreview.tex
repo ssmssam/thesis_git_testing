@@ -1,0 +1,188 @@
+\documentclass[12pt]{article}
+	\addtolength{\oddsidemargin}{-.4in}
+	\addtolength{\evensidemargin}{-.4in}
+	\addtolength{\textwidth}{0.8in}
+	\addtolength{\topmargin}{-0.8in}
+	\addtolength{\textheight}{1.4in}
+\usepackage{float}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+%\usepackage{textgreek}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{bbm}
+\usepackage{bbold}
+\usepackage{graphicx}
+\def\jddot#1{\stackrel{\bigdot\bigdot}{#1}}
+\def\L{\mathcal L}
+\def\e{\varepsilon}
+\def\simlt{\stackrel{<}{{}_\sim}}
+\def\simgt{\stackrel{>}{{}_\sim}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\newcommand{\nucl}[3]{
+\ensuremath{
+\phantom{\ensuremath{^{#1}_{#2}}}
+\llap{\ensuremath{^{#1}}}
+\llap{\ensuremath{_{\rule{0pt}{.75em}#2}}}
+\mbox{#3}
+}
+}
+
+
+
+
+
+%\bibpunct{(}{)}{;}{a}{ }{,}
+\begin{document}
+%\bibliographystyle{IEEEtran}
+
+\title{Literature Review}
+\author{Samuel Murphy-Sugrue\\}
+ %School of Physics and Astronomy\\
+ %University of Southampton\\
+ %Southampton SO17 1BJ
+ %Supervised by Pasquale Di Bari}
+
+\maketitle
+
+
+
+\section{Introduction}
+\paragraph{•}
+Talk about the main aims of the project and motivation for it. EG understanding probe theory in magnetised plasmas, essential for fusion
+
+1)  To produce a generic code valuable to Fusion and Technological plasma communities that model the charged particle collection in a variety of B-field’s, plasma environments and probe geometries
+2) To produce a code/model that can predict the probe I-V characteristic for a given set of plasma operating parameters and probe geometries. The model will provide confidence in obtaining the “true”  local plasma parameters from  fitting measured characteristics to those in the model database.
+3) The model/simulation based- on PIC  (or possibly fluid –particle MMC hybrid) will be user-friendly and have a user interface. 
+4) the model will be ideal for interpreting flush mounted probe data to obtained in the new X divertor of MAST
+5) The model will be applied to Langmuir probe data obtained on the Liverpool Magnetron rig. 
+
+
+
+
+\section{Modelling} 
+Discuss difficulties with modelling, e.g large number of particles all interacting with each other, can't track all their interactions 
+
+ways to over come this eg fluid and pic code 
+
+\subsection{PIC CODES} 
+\subsubsection{Introduction}
+When first developed,splits the domain into a mesh, where they are used, what for , why they are useful, advantages over other types of code, possible disadvantages e.g computation time and maybe modelling collisions. 
+Why I will be using this for my code over fluid models. 
+MENTION SELF FORCE
+\subsubsection{Discussion of General Method} 
+Talk about the stages in a pic code, moving, calculating density etc. Talk about finite difference method for working out poission equations etc. 
+
+\subsubsection{Talk about the Code I have developed}
+Talk about your code, what it does, what it assumes, what physics is in it, what could be added. 
+Paragraph on the difference between a 1D and 3d code, much more computation time etc. Do the field solving formula change and if so how.
+\subsubsection{Review of Existing Pic Codes}
+Explain there are pic codes already out there that model the plasma edge. Can add probes to these codes and model their behaviour. 
+Table of codes both commercial and open source. What would be useful for me, what isn;t useful. 
+
+\section{Plasma Surface Interactions}
+Understanding the interactions between plasmas and material surfaces is crucial in many areas of plasma science. It is particularly relevant to probes because ... copy abstract of project or poster secondary e emission etc
+\subsection{Sheath}
+A plasma sheath forms whenever a material object comes into contact with a plasma e.g. a Langmuir probe inserted into the plasma or the containing wall of a tokamak. In the case where the wall is initially neutral, electrons in the plasma will rush to the wall and hence give it a negative charge. This occurs because electrons are much less massive than ions and typically at a higher temperature and so move around much faster in the plasma. This process can not go on indefinitely. Due to the increasing negative charge on the wall a potential barrier builds up that repels electrons and attracts ions \cite{sheathformation}. The potential barrier continues to increase reducing the electron flux and increasing the ion flux until a steady state is obtained once the two fluxes become equal. 
+
+The sheath is essentially a layer in the plasma of positive space charge, a region where quasi-neutrality no longer holds. This positive layer separates the rest of the plasma from the wall of the containing vessel and acts to shield the rest of the plasma from the negative wall. In order for the equilibrium between the fluxes to be established, the ions must be moving at sufficient velocity above their thermal velocity before entering the sheath. This suggests a region beyond the sheath, a presheath, responsible for accelerating the ions up to a sufficient velocity ($v_s$) before entering the sheath. The presheath is a quasi-neutral region that extends much further out in the plasma than the sheath. The Bohm Criterion places a minimum limit on $v_s$ if steady state is to be obtained \cite{Bohmcriterion}. The criterion is given by 
+\be
+v_s \geq \sqrt{\frac{k_b T_e}{m_i}}
+\label{bohm}
+\ee
+Where $T_e$ is the electron temperature and $m_i$ the mass of an ion. 
+\subsection{Sputtering}
+\subsection{Secondary E emission}
+\subsection{Thermionic emission}
+\subsection{Chemical Erosion}
+\section{Probe Theory}
+\subsection{Introduction}
+Langmuir probes are the oldest type of plasma diagnostic device and are still the most often used today in relatively low temperature plasmas, up to hundrends of electron-volts. (Check). The probes take their name from the Nobel prize winning scientist Irving Langmuir who coined the term plasma and whose paper published in 1926 with H.M. Mott-Smith provided a means to measure plasma parameters by obtaining a Current-Voltage curve using a probe. REF PAPER AND READ IT. The probe in its simplest form is essentially a bare wire or metal disc, electrically biased with respect to a reference electrode which is then inserted into a plasma to draw an ion or electron current. This set-up is known as the single probe. More sophisticated  designs do exist such as double and triple probes and will be discussed later in the report. Electrical probes are used to diagnose a wide range of plasmas from space plasmas with low-density and weak magnetic field to those at the edge of nuclear fusion devices with hostile conditions to material surfaces and strong magnetic fields.
+\paragraph{•}
+Langmuir probes are a powerful diagnostic capable of providing local measurements of  the plasma potential, electron density and electron temperature at a good time resolution (10e-8) seconds. They are fairly easy to design and build and acquiring data from them is straightforward. Despite their simplicity in construction and operation, probes do have a downside compared to other diagnostics. As probes are in contact with the plasma, they perturb it, changing the local density and potential in the surrounding plasma. This complicates the interpretation of probe data. The role of probe theory is to determine the unperturbed values of the plasma which would exist in the absence of the probe. However theoretical models used to interpret the data can be very complicated and in some cases non-existent. There is currently no reliable probe theory for flush mounted probes at grazing incidence to a magnetic field. 
+\paragraph{•}
+Probe theory relies on sheath physics which will be discussed in section(getnumber). Basic probe theory assumes that the collection of charge carriers is collisionless in the sheath. It also assumes the perturbation caused by the probe is limited to the sheath region with a well defined boundary. There are differences between measurements obtained using probes and measurements from other diagnostics such as.. get example and reference.  
+
+
+TALK ABOUT THE GENERAL THEORY OF PROBES AND TALK ABOUT WHAT WILL BE DISCUSSED. SAY MAGNETIC FIELDS COMPLICATE THINGS AS WILL BE DISCUSSED IN SECTION .. 
+
+"
+Conventional Langmuir probe theory assumes collisionless movement of charge carriers in the space charge sheath around the probe. Further it is assumed that the sheath boundary is well-defined and that beyond this boundary the plasma is completely undisturbed by the presence of the probe. This means that the electric field caused by the difference between the potential of the probe and the plasma potential at the place where the probe is located is limited to the volume inside the probe sheath boundary.
+
+The general theoretical description of a Langmuir probe measurement requires the simultaneous solution of the Poisson equation, the collision-free Boltzmann equation or Vlasov equation, and the continuity equation with regard to the boundary condition at the probe surface and requiring that, at large distances from the probe, the solution approaches that expected in an undisturbed plasma.
+Talk about when probes were first developed. 
+Why they are so useful - easy to obtain data, but harder to interpret. 
+Where they are used - e.g on satellites, cool plasmas, edge of tokamaks and other fusion devices. 
+Brief bit on their advantages over other diagnostics and their disadvantages relevent to fusion. E.g easy to obtain data and fairly cheap but distort the local plasma makes interpretation hard. "
+
+
+
+\subsection{Unmagnetised Probe Theory}
+When a probe is inserted into a plasma it is bombarded by the electrons, ions and neutrals in the plasma. Absent of any electric forces(CHECK THIS), the impact rate per $m^2$ for each species is given by 
+\be 
+J = \frac{1}{4} n \langle{v}\rangle 
+\ee
+where $n$ is the number density and $\langle{v}\rangle$ their average speed. For a Maxwellian distribution of particles this can be expressed as - 
+\be 
+J =  \frac{1}{4} n \sqrt{\frac{8 K T}{\pi M}}
+\ee
+Electrons are less massive than ions and tend to be hotter so if the probe is allowed to float it will quickly charge up negative until it reaches the floating potential $(V_f)$. At floating potential the probe collects zero net current from the plasma. It is less than the plasma potential $V_p$ as a negative bias is required to retard the flow of electrons and accelerate ions in order to balance the flux.
+\paragraph{•}
+Probes are used to make an IV characteristic, the voltage is swept from negative to positive while the current collected by the probe is recorded. Let $V_B$ be the bias applied to the probe. For $V_B =V_f$ no net current is drawn from the plasma. For $V_B > V_f$ electrons are attracted to the probe therefore a net current will flow into the plasma while for $V_B <V_f$ ions are attracted to the probe therefore a net current flows out of the plasma. Typical sign convention declares current leaving the plasma as negative while current entering the plasma as positive. 
+
+GET IDEAL CURVE SAME AS USED IN POSTER
+\paragraph{•}
+The floating potential is labelled on the figure, at this point the ion flux to the probe is equal to the electron flux to the probe. The currents are therefore equal and opposite so no net current is drawn from the plasma. While the probe is biased negative with respect to the plasma potential, ion collection to the probe is unhindered and so ions are collected at a saturated rate. If the probe bias is sufficiently negative all electrons are repelled and the ion saturation current is then given by 
+\be 
+I^{+}_{sat} = \frac{1}{2} n_0 e c_s A 
+\ee
+where $n_0$ is the unperturbed density far from the probe, $e$ is the fundamental charge, $c_s$ the ion sound speed and $A$ the area of the probe. (MAYBE DERIVE THIS) 
+The ion flux is independent of the applied potential so making the probe more negative will not result in an increase in probe current. As the bias voltage increases and $V_B tends to V_p$ the sheath potential drop is reduced and more electrons are able to reach the probe. For a Maxwellian distribution of electrons and neglecting effects such as Secondary Electron Emission, the electron current able to reach the probe is given by 
+\be 
+I^{-} = \frac{1}{4} n_0 e c_e A \exp\left[\frac{e(V_B-V_p}{k T_e}\right]
+\ee
+The total current reaching the probe in this region will be made up of ions and electrons. The total current as a function of bias voltage is then 
+\be 
+I(V_B) = - n_0 e A\left(\frac{1}{2} c_s - \frac{1}{4}  c_e \exp\left[\frac{e(V_B-V_p}{k T_e}\right] \right)
+\ee
+As the probe bias continues to rise it will eventually be equal to the plasma potential. At this point the sheath disappears and so eq(ABOVE) no longer holds. Due to conservation of flux the electron collection rate cannot exceed the collection rate due to their unimpeded random electron flux. 
+The electron saturation current is then given by 
+\be  
+I^{-}_{sat} = \frac{1}{4} n_0 e c_e A 
+\ee
+For a pure hydrogenic plasma with no magnetic fields the ratio of the electron saturation current to ion saturation current is very high, it is typically found that 
+\be 
+\frac{I^{-}_{sat}}{I^{+}_{sat}} \approx 60
+\ee
+For this reason the ion contribution to the total current is negligible and often ignored. The total current reaching the probe when $V_B > V_p$ is then given by eq above. 
+
+
+By equating Eqs .. and .. a value for the floating potential is found. 
+\be 
+V_f = V_p + \frac{k T_e}{2 e} ln\left(4 \pi\frac{m_e}{m_i}\right)
+\ee
+The above equations have all assumed the simplest case of a collisionless sheath with no magnetic field present. All surface-plasma interactions have been ignored. Also these equations are only valid for the thin sheath regime where the probe diameter $d$ $>>$ $\lambda_D$. In some cases (list) it is possible for a thick sheath regime to exist. In this case $\lambda_D >> d$. Due to their orbital motions around the probe, not all charged particles that enter the sheath will actually be collected by the probe. The current drawn by the probe is now a function on bias voltage and also depends on the detailed geometry of the probe. 
+Want all equations here relating Vp to density etc. Maybe derive or provide referenced derivations. 
+
+Ideal IV curve, how measurements are made 
+Actual IV curves, why they differ, e.g. rounding of the knee, how measurements are made 
+
+
+ 
+\subsection{Magnetised Plasmas}
+In an unmagnetised plasma the dynamics of charged particles are determined by the electric field of the plasma sheath and pre-sheath. Adding a magnetic field restricts the particle motion, charged particles are free to stream along the field lines (parrallel to B) but their cross-field motion is now restricted. Charged particles orbit the magnetic field lines in circular orbits with radius equivalent to the Lamor radius ($r_L$) given by
+\be 
+r_L = \frac{v m}{q B}
+\ee
+Where $v$ is the velocity of the charged particle, $m$ it's mass and B the strength of the magnetic field in Tesla. 
+The problem is now two dimensional as particles cannot free stream to the probe but are restricted to following the field. Particle transport to the probe is now dominated by cross-field diffusion so the previous collisionless theory no longer applies. 
+Why does magnetising the plasma complicate probe theory
+What has been observed in experiments where plasma is magnetised e.g non saturation of ion current 
+
+
+\section{References}
+%\bibliography{references}
+\end{document}

@@ -1,0 +1,17 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Probes in Magnetised Plasmas}{4}
+\contentsline {section}{\numberline {2}Particle-In-Cell Methods}{9}
+\contentsline {subsubsection}{\numberline {2.0.1}Calculating the Density}{10}
+\contentsline {subsubsection}{\numberline {2.0.2}Calculating the Potential}{11}
+\contentsline {subsubsection}{\numberline {2.0.3}Calculating the Electric Field}{12}
+\contentsline {subsubsection}{\numberline {2.0.4}The Particle Mover}{13}
+\contentsline {section}{\numberline {3}Testing My Code}{14}
+\contentsline {subsubsection}{\numberline {3.0.1}Cold Plasma Oscillations}{14}
+\contentsline {subsubsection}{\numberline {3.0.2}Cold Beam Instability}{16}
+\contentsline {subsubsection}{\numberline {3.0.3}Two Stream Instability}{18}
+\contentsline {subsubsection}{\numberline {3.0.4}Floating Wall}{18}
+\contentsline {section}{\numberline {4}Future plans}{22}
+\contentsline {section}{\numberline {5}Appendix}{24}
+\contentsline {subsection}{\numberline {5.1}Self Force}{24}
+\contentsline {section}{\numberline {6}References}{26}

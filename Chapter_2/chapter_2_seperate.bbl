@@ -1,0 +1,186 @@
+\begin{thebibliography}{10}
+
+\bibitem{matthews}
+G~F Matthews.
+\newblock Tokamak plasma diagnosis by electrical probes.
+\newblock {\em Plasma Physics and Controlled Fusion}, 36(10):1595, 1994.
+
+\bibitem{first_wall}
+J.~A. Boedo M. Groth N. H. Brooks A. McLean B. LaBombard C. H. Skinner D. L.
+  Rudakov W. P. West C. P. C.~Wong C.~J.~Lasnier, S. L.~Allen.
+\newblock Chapter 10: First wall and operational diagnostics.
+\newblock {\em Fusion Science and Technology}, 53(2):640, 2008.
+
+\bibitem{mottsmith}
+H.~M. Mott-Smith and Irving Langmuir.
+\newblock The theory of collectors in gaseous discharges.
+\newblock {\em Phys. Rev.}, 28:727--763, Oct 1926.
+
+\bibitem{probetheoryandpractise}
+Evgeny~V. Shun'ko.
+\newblock {\em Langmuir Probe in Theory and Practise}.
+\newblock Universal Publishers, 1 edition, 2009.
+
+\bibitem{sheathformation}
+K-U Riemann.
+\newblock The bohm criterion and sheath formation.
+\newblock {\em J.Phys.D:Appl.Phys}.
+
+\bibitem{stangeby-sheath}
+P~C Stangeby.
+\newblock A tutorial on some basic aspects of divertor physics.
+\newblock {\em Plasma Physics and Controlled Fusion}, 42(12B):B271, 2000.
+
+\bibitem{bohm}
+D~Bohm.
+\newblock The characteristics of electrical discharges in magnetic fields.
+\newblock {\em A Guthry and R K Wakerling ch 3, pg 77}.
+
+\bibitem{stangeby-2000}
+P~C Stangeby.
+\newblock {\em {The Plasma Boundary of Magnetic Fusion Devices}}.
+\newblock IoP, 2000.
+
+\bibitem{time-res}
+Robert~B. Lobbia and Alec~D. Gallimore.
+\newblock Temporal limits of a rapidly swept langmuir probe.
+\newblock {\em Physics of Plasmas}, 17(7), 2010.
+
+\bibitem{monk}
+Raymond~David Monk.
+\newblock Langmuir probe measurements in the divertor plasma of the jet
+  tokamak.
+\newblock 1996.
+
+\bibitem{Chodura}
+R.~Chodura.
+\newblock Plasma–wall transition in an oblique magnetic field.
+\newblock {\em Physics of Fluids}, 25(9), 1982.
+
+\bibitem{MPS_polarisation}
+Spilios Riyopoulos.
+\newblock Unstable particle drift across a magnetic field caused by oblique
+  electric field gradients.
+\newblock {\em Physics of Plasmas}, 3(12), 1996.
+
+\bibitem{stangeby-angles}
+P.C. Stangeby.
+\newblock The chodura sheath for angles of a few degrees between the magnetic
+  field and the surface of divertor targets and limiters.
+\newblock {\em Nuclear Fusion}, 52(8):083012, 2012.
+
+\bibitem{c-mod}
+A.Q. Kuang, D.~Brunner, B.~LaBombard, R.~Leccacorvi, and R.~Vieira.
+\newblock Design and operation of a high-heat flux, flush-mounted ‘rail’
+  langmuir probe array on alcator c-mod.
+\newblock {\em Nuclear Materials and Energy}, pages~--, 2016.
+
+\bibitem{kinetic-sims}
+David Coulette and Giovanni Manfredi.
+\newblock Kinetic simulations of the chodura and debye sheaths for magnetic
+  fields with grazing incidence.
+\newblock {\em Plasma Physics and Controlled Fusion}, 58(2):025008, 2016.
+
+\bibitem{bias-probes}
+P~C Stangeby.
+\newblock Effect of bias on trapping probes and bolometers for tokamak edge
+  diagnosis.
+\newblock {\em Journal of Physics D: Applied Physics}, 15(6):1007, 1982.
+
+\bibitem{discharges}
+McGraw-Hill.
+\newblock The characteristics of electrical discharges in magnetic fields.
+\newblock {\em National nuclear energy series}, 5, 1949.
+
+\bibitem{JET_TE}
+J~A Tagle, P~C Stangeby, and S~K Erents.
+\newblock Errors in measuring electron temperatures using a single langmuir
+  probe in a magnetic field.
+\newblock {\em Plasma Physics and Controlled Fusion}, 29(3):297, 1987.
+
+\bibitem{te-determination}
+P~C Stangeby.
+\newblock Determination of $t_e$ from a langmuir probe in a magnetic field by
+  directly measuring the probe's sheath drop using a pin-plate probe.
+\newblock {\em Plasma Physics and Controlled Fusion}, 37(11):1337, 1995.
+
+\bibitem{pin-plate-pitts}
+R~A Pitts and P~C Stangeby.
+\newblock Experimental tests of langmuir probe theory for strong magnetic
+  fields.
+\newblock {\em Plasma Physics and Controlled Fusion}, 32(13):1237, 1990.
+
+\bibitem{pin-plate-stangeby}
+P~C Stangeby.
+\newblock Determination of t e from a langmuir probe in a magnetic field by
+  directly measuring the probe's sheath drop using a pin-plate probe.
+\newblock {\em Plasma Physics and Controlled Fusion}, 37(11):1337, 1995.
+
+\bibitem{probe-response}
+Ian~G. Brown, Alan~B. Compher, and Wulf~B. Kunkel.
+\newblock Response of a langmuir probe in a strong magnetic field.
+\newblock {\em Physics of Fluids (1958-1988)}, 14(7), 1971.
+
+\bibitem{FMP-intro}
+A.~Carlson, V.~Rohde, and M.~Weinlich.
+\newblock The separation of angle and size effects on langmuir characteristics.
+\newblock {\em Journal of Nuclear Materials}, 241:722 -- 727, 1997.
+
+\bibitem{bi-max}
+M~Dimitrova, Tsv~K Popov, P~Ivanova, E~Vasileva, E~Hasan, J~Horáček,
+  P~Vondráček, R~Dejarnac, J~Stöckel, V~Weinzettl, J~Havlicek, F~Janky, and
+  R~Panek.
+\newblock Evaluation of the scrape-off-layer plasma parameters by a horizontal
+  reciprocating langmuir probe in the compass tokamak.
+\newblock {\em Journal of Physics: Conference Series}, 514(1):012049, 2014.
+
+\bibitem{castor-bi}
+Tsv~K Popov, P~Ivanova, J~Stöckel, and R~Dejarnac.
+\newblock Electron energy distribution function, plasma potential and electron
+  density measured by langmuir probe in tokamak edge plasma.
+\newblock {\em Plasma Physics and Controlled Fusion}, 51(6):065014, 2009.
+
+\bibitem{nstx-bi}
+M.A. Jaworski, M.G. Bell, T.K. Gray, R.~Kaita, J.~Kallman, H.W. Kugel,
+  B.~LeBlanc, A.G. McLean, S.A. Sabbagh, V.A. Soukhanovskii, D.P. Stotler, and
+  V.~Surla.
+\newblock Modification of the electron energy distribution function during
+  lithium experiments on the national spherical torus experiment.
+\newblock {\em Fusion Engineering and Design}, 87(10):1711 -- 1718, 2012.
+\newblock The 2nd International Symposium of Lithium Application for Fusion
+  Devices.
+
+\bibitem{sarah}
+S~Elmore, SY~Allan, A~Kirk, AJ~Thornton, JR~Harrison, P~Tamain, M~Ko{\v{c}}an,
+  JW~Bradley, MAST Team, et~al.
+\newblock Scrape-off layer ion temperature measurements at the divertor target
+  in mast by retarding field energy analyser.
+\newblock {\em Journal of Nuclear Materials}, 438:S1212--S1215, 2013.
+
+\bibitem{advanced}
+G~Van Oost.
+\newblock Advanced probe edge diagnostics for fusion devices.
+\newblock {\em Journal of Physics: Conference Series}, 666(1):012001, 2016.
+
+\bibitem{tunnel}
+J.~P. Gunn, R.~Schrittwieser, P.~Balan, C.~Ioniţă, J.~Stöckel, J.~Adámek,
+  I.~Ďuran, M.~Hron, R.~Pánek, O.~Bařina, R.~Hrach, M.~Vicher, G.~Van Oost,
+  T.~Van Rompuy, and E.~Martines.
+\newblock Tunnel probes for measurements of the electron and ion temperature in
+  fusion plasmas.
+\newblock {\em Review of Scientific Instruments}, 75(10):4328--4330, 2004.
+
+\bibitem{tunnel_ti}
+P.~Balan, R.~Schrittwieser, J.~Adámek, O.~Bařina, P.~De~Beule, I.~Ďuran,
+  J.~P. Gunn, R.~Hrach, M.~Hron, C.~Ioniţă, E.~Martines, R.~Pánek,
+  J.~Stöckel, G.~Van Den~Berge, G.~Van~Oost, T.~Van~Rompuy, and M.~Vicher.
+\newblock Measurements of the parallel and perpendicular ion temperatures by
+  means of an ion-sensitive segmented tunnel probe.
+\newblock {\em Contributions to Plasma Physics}, 44(7-8):683--688, 2004.
+
+\bibitem{review_isp}
+I.~Katsumata.
+\newblock A review of ion sensitive probes.
+\newblock {\em Contributions to Plasma Physics}, 36(S1):73--79, 1996.
+
+\end{thebibliography}

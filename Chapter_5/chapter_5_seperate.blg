@@ -1,0 +1,104 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chapter_5_seperate.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+I was expecting an "="---line 176 of file references.bib
+ :   
+ :   series={Series in Plasma Physics and Fluid Dynamics},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 960 of file references.bib
+ :      @article{pin-plate-pitts
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 985 of file references.bib
+ : @article{Chodura
+ :                 ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1019 of file references.bib
+ :  eid = 
+ :        ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1089 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1095 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1122 of file references.bib
+ :  
+ :  %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1133 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1163 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1186 of file references.bib
+ : @article{tilting
+ :                 ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1219 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 1252 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Gunn-1995"
+Warning--I didn't find a database entry for "FMP_tilt"
+Warning--I didn't find a database entry for "Bergmann-1994"
+Warning--I didn't find a database entry for "fluid_model"
+Warning--empty journal in Stangeby
+You've used 18 entries,
+            1791 wiz_defined-function locations,
+            579 strings with 6980 characters,
+and the built_in function-call counts, 4554 in all, are:
+= -- 343
+> -- 292
+< -- 0
++ -- 106
+- -- 88
+* -- 409
+:= -- 791
+add.period$ -- 54
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 161
+empty$ -- 403
+format.name$ -- 88
+if$ -- 949
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 18
+newline$ -- 93
+num.names$ -- 18
+pop$ -- 20
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 57
+stack$ -- 0
+substring$ -- 315
+swap$ -- 17
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 38
+width$ -- 20
+write$ -- 199
+(There were 12 error messages)

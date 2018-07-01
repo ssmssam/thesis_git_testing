@@ -1,0 +1,107 @@
+\begin{thebibliography}{10}
+
+\bibitem{Dawson}
+John~M. Dawson.
+\newblock Thermal relaxation in a one‐species, one‐dimensional plasma.
+\newblock {\em Physics of Fluids}, 7(3), 1964.
+
+\bibitem{simulation_types}
+H~C Kim, F~Iza, S~S Yang, M~Radmilović-Radjenović, and J~K Lee.
+\newblock Particle and fluid simulations of low-temperature plasma discharges:
+  benchmarks and kinetic effects.
+\newblock {\em Journal of Physics D: Applied Physics}, 38(19):R283, 2005.
+
+\bibitem{fluid_closure}
+E.~{Westerhof} and J.~{Pratt}.
+\newblock {Closure of the single fluid magnetohydrodynamic equations in
+  presence of electron cyclotron current drive}.
+\newblock {\em Physics of Plasmas}, 21(10):102516, October 2014.
+
+\bibitem{sturrock1994plasma}
+P.A. Sturrock.
+\newblock {\em Plasma Physics: An Introduction to the Theory of Astrophysical,
+  Geophysical and Laboratory Plasmas}.
+\newblock Stanford-Cambridge program. Cambridge University Press, 1994.
+
+\bibitem{probe_sims_fluid}
+V~Hrub{\`y} and R~Hrach.
+\newblock Selected techniques for langmuir probe modelling in low-temperature
+  plasmas.
+\newblock In {\em WDS 2010-Proceedings of Contributed Papers. Proceedings of
+  the 19th Annual Conference of Doctoral Students, held 1-4 June 2010, in
+  Prague. Edited by Jana Safr{\'a}nkov{\'a} and Jir{\'\i} Pavl{\^u}. Part
+  II-Physics of Plasmas and Ionized Media (ISBN 978-80-7378-140-8) MATFYZPRESS,
+  Prague, 2010., p. 38-41}, volume~1, pages 38--41, 2010.
+
+\bibitem{krek}
+Janez Krek, Nikola Jelić, and Jože Duhovnik.
+\newblock Particle-in-cell (pic) simulations on plasma–sheath boundary in
+  collision-free plasmas with warm-ion sources.
+\newblock {\em Nuclear Engineering and Design}, 241(4):1261 -- 1266, 2011.
+\newblock International Conference on Nuclear Energy for New Europe 2009.
+
+\bibitem{soton}
+D.~Nunn.
+\newblock A novel technique for the numerical simulation of hot collision-free
+  plasma; vlasov hybrid simulation.
+\newblock {\em J. Comput. Phys.}, 108(1):180--196, September 1993.
+
+\bibitem{vlasov}
+G.~Sánchez-Arriaga and D.~Pastor-Moreno.
+\newblock Direct vlasov simulations of electron-attracting cylindrical langmuir
+  probes in flowing plasmas.
+\newblock {\em Physics of Plasmas}, 21(7), 2014.
+
+\bibitem{Boris}
+J.~P. Boris.
+\newblock Relativistic plasma simulation-optimization of a hybrid code,.
+\newblock {\em Proceedings of the Fourth Conference on Numerical Simulations of
+  Plasmas}, 20, 1970.
+
+\bibitem{boris_good}
+Hong Qin, Shuangxi Zhang, Jianyuan Xiao, Jian Liu, Yajuan Sun, and William~M.
+  Tang.
+\newblock Why is boris algorithm so good?
+\newblock {\em Physics of Plasmas}, 20(8), 2013.
+
+\bibitem{bible}
+Charles~K. Birdsall and A.~Bruce Langdon.
+\newblock {\em Plasma physics via computer simulation}.
+\newblock Series in plasma physics. Taylor \& Francis, New York, 2005.
+\newblock Originally published: New York ; London : McGraw-Hill, 1985.
+
+\bibitem{JH-thesis}
+James Harrison.
+\newblock Characterisation of detached plasmas on the mast tokamak.
+\newblock September 2010.
+
+\bibitem{Emmert}
+G~A Emmert, R~M Wieland, A~T Mense, and J~N Davidson.
+\newblock {Electric sheath and presheath in a collisionless, finite ion
+  temperature plasma}.
+\newblock {\em Physics of Fluids}, 23(4), 1980.
+
+\bibitem{M-Komm}
+Michael Komm.
+\newblock Studies of tokamak edge plasma and its interaction with the first
+  wall.
+\newblock September.
+
+\bibitem{Wesson}
+John. Wesson and J.~W. Connor.
+\newblock {\em Tokamaks / John Wesson ; with contributions from J.W. Connor ...
+  [et al.]}.
+\newblock Clarendon Press Oxford ; New York, 1987.
+
+\bibitem{Lapenta}
+Giovanni Lapenta.
+\newblock {\em Particle In Cell Methods With Application to Simulations in
+  Space Weather}.
+\newblock Cambridge University Press, New York, NY, USA, 1992.
+
+\bibitem{selfforce}
+Nikolaevich Grigorʹev, Yu.~N. Grigoryev, V.~A. Vshivkov, and M.~P. Fedoruk.
+\newblock {\em Numerical "particle-in-cell" Methods: Theory and Applications}.
+\newblock Theory and Applications. VSP, 2002.
+
+\end{thebibliography}

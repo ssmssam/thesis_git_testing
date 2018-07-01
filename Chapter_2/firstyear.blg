@@ -1,0 +1,82 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: firstyear.aux
+The style file: IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: references.bib
+You're missing a field name---line 66 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 72 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 98 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 117 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 173 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 206 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in monk
+Warning--empty journal in d3d
+Warning--empty author in CASTOR
+Warning--empty year in sheathformation
+
+Done.
+You've used 21 entries,
+            4039 wiz_defined-function locations,
+            934 strings with 10955 characters,
+and the built_in function-call counts, 10636 in all, are:
+= -- 847
+> -- 256
+< -- 32
++ -- 124
+- -- 58
+* -- 504
+:= -- 1814
+add.period$ -- 40
+call.type$ -- 21
+change.case$ -- 16
+chr.to.int$ -- 30
+cite$ -- 25
+duplicate$ -- 860
+empty$ -- 952
+format.name$ -- 69
+if$ -- 2372
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 171
+newline$ -- 102
+num.names$ -- 20
+pop$ -- 422
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 863
+stack$ -- 0
+substring$ -- 111
+swap$ -- 577
+text.length$ -- 22
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 21
+warning$ -- 4
+while$ -- 28
+width$ -- 23
+write$ -- 223
+(There were 6 error messages)

@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
+The top-level auxiliary file: chapter_3_seperate.aux
+The style file: unsrt.bst
+Database file #1: references.bib
+You're missing a field name---line 183 of file references.bib
+ :  
+ :  %publisher = {University of York},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 191 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 197 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 223 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 242 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 349 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 476 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in JH-thesis
+Warning--empty journal in M-Komm
+Warning--there's a month but no year in M-Komm
+You've used 17 entries,
+            1791 wiz_defined-function locations,
+            556 strings with 6658 characters,
+and the built_in function-call counts, 3265 in all, are:
+= -- 280
+> -- 144
+< -- 2
++ -- 56
+- -- 39
+* -- 197
+:= -- 549
+add.period$ -- 56
+call.type$ -- 17
+change.case$ -- 12
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 161
+empty$ -- 329
+format.name$ -- 39
+if$ -- 727
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 22
+newline$ -- 90
+num.names$ -- 17
+pop$ -- 49
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 66
+stack$ -- 0
+substring$ -- 112
+swap$ -- 24
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 25
+width$ -- 19
+write$ -- 190
+(There were 7 error messages)

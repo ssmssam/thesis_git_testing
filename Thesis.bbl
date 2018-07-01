@@ -1,0 +1,25 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{1}
+
+\bibitem{grid}
+\url{http://www.particleincell.com/blog/2010/es-pic-method/}.
+
+\bibitem{shape}
+\url{http://www.daniel-martin.co.uk/files/pic.pdf}.
+
+\bibitem{Dawson}
+John~M. Dawson, \emph{Thermal relaxation in a one‐species, one‐dimensional
+  plasma}, Physics of Fluids \textbf{7} (1964), no.~3.
+
+\bibitem{poisson_solvers}
+Z~Pek’arek and R~Hrach, \emph{A comparison of advanced poisson equation
+  solvers applied to the particle-in-cell plasma model}, WDS’06 Proceedings
+  (2006), 187--192.
+
+\end{thebibliography}

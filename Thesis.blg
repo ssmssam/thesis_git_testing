@@ -1,0 +1,80 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Thesis.aux
+The style file: amsplain.bst
+Database file #1: references.bib
+You're missing a field name---line 66 of file references.bib
+ :   howpublished = "\url{http://www.daniel-martin.co.uk/files/pic.pdf}",
+ :                                                                       08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 72 of file references.bib
+ :   howpublished = "\url{http://wwwnew.cs.princeton.edu/courses/archive/spring04/cos590/Stone/Lecture2.ppt}",
+ :                                                                                                            08},
+I'm skipping whatever remains of this entry
+You're missing a field name---line 98 of file references.bib
+ :     
+ :     %volume   = "24",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 117 of file references.bib
+ :     
+ :     %month    = "April",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 173 of file references.bib
+ :   howpublished = "\url{http://www.particleincell.com/blog/2010/es-pic-method/}",
+ :                                                                                 08},
+I'm skipping whatever remains of this entry
+You're missing a field part---line 206 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 333 of file references.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in grid
+Warning--to sort, need author or key in shape
+Warning--missing pages in Dawson
+You've used 4 entries,
+            2213 wiz_defined-function locations,
+            516 strings with 4311 characters,
+and the built_in function-call counts, 879 in all, are:
+= -- 70
+> -- 22
+< -- 0
++ -- 11
+- -- 6
+* -- 59
+:= -- 128
+add.period$ -- 4
+call.type$ -- 4
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 42
+empty$ -- 99
+format.name$ -- 6
+if$ -- 187
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 6
+newline$ -- 22
+num.names$ -- 4
+pop$ -- 35
+preamble$ -- 1
+purify$ -- 11
+quote$ -- 0
+skip$ -- 24
+stack$ -- 0
+substring$ -- 46
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 3
+while$ -- 6
+width$ -- 5
+write$ -- 35
+(There were 7 error messages)
